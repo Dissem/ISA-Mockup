@@ -73,7 +73,7 @@
           <span hidden?="{{!module.subscription}}">
             Eingeschrieben für {{module.subscription.implementation.day}} {{module.subscription.implementation.time}} in {{module.subscription.implementation.place}}
           </span>
-          <paper-button class="colored" hidden?="{{!isSubscribePossible(student)}}" on-click="{{subscribe}}" style="margin-left: 2em">{{isChangePossible(module.subscription)?'Ändern':'Einschreiben'}}</paper-button>
+          <paper-button class="colored" raised hidden?="{{!isSubscribePossible(student)}}" on-click="{{subscribe}}" style="margin-left: 2em">{{isChangePossible(module.subscription)?'Ändern':'Einschreiben'}}</paper-button>
         </div>
       </div>
       <content></content>
