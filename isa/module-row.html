@@ -31,6 +31,7 @@
     }
     #card-header {
       background-color: #fafafa;
+      cursor: pointer;
     }
     #card-header, #description {
       padding: 10px;
@@ -50,7 +51,7 @@
     <paper-shadow z="1"></paper-shadow>
     <div id="card-header" layout horizontal center on-click="{{headerClick}}">
       {{module.title}}
-      <span id="credits">{{module.credits}}</span>
+      <span id="credits">{{module.credits}} ECTS</span>
     </div>
     <div id="description" hidden="true">
       <div class="row">
@@ -70,7 +71,7 @@
         </div>
         <div class="col-md-12" style="text-align:right">
           <span hidden?="{{!module.subscription}}">
-            {{module.subscription.implementation.day}} {{module.subscription.implementation.time}} in {{module.subscription.implementation.place}}
+            Eingeschrieben für {{module.subscription.implementation.day}} {{module.subscription.implementation.time}} in {{module.subscription.implementation.place}}
           </span>
           <paper-button class="colored" hidden?="{{!isSubscribePossible(student)}}" on-click="{{subscribe}}" style="margin-left: 2em">{{isChangePossible(module.subscription)?'Ändern':'Einschreiben'}}</paper-button>
         </div>
