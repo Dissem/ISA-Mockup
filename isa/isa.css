@@ -7,7 +7,10 @@
 	color: #03a9f4;
 }
 .container {
-	margin: 5px auto;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: -15px;
+	margin-right: 0px;
 }
 .card {
 	padding: 20px;
