@@ -41,7 +41,7 @@
 
     <div layout vertical center>
       <template id="grouplist" repeat="{{group in groups}}">
-        <module-header group="{{group}}"></module-header>
+        <module-header group="{{group}}" student="{{student}}" subscriptions="{{student.modules}}"></module-header>
         <template id="modules" repeat="{{module in group.modules}}">
           <module-row
             module="{{module}}"

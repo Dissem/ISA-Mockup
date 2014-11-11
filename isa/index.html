@@ -48,6 +48,20 @@
     color: #ffff00;
   }
   </style>
+  <script>
+  function contains(a, obj) {
+    if (a == undefined) {
+      return false;
+    }
+    var i = a.length;
+    while (i--) {
+       if (a[i] == obj) {
+           return true;
+       }
+    }
+    return false;
+  }
+  </script>
 </head>
 <body unresolved>
   <core-header-panel>

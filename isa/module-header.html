@@ -7,7 +7,7 @@
 <link rel="import" href="../components/paper-dropdown-menu/paper-dropdown-menu.html">
 <link rel="import" href="../components/paper-item/paper-item.html">
 
-<polymer-element name="module-header" attributes="group">
+<polymer-element name="module-header" attributes="group subscriptions student">
   <template>
     <link rel="stylesheet" href="isa.css">
     <link rel="stylesheet" href="bootstrap-grid.css">
@@ -32,16 +32,23 @@
     </style>
 
     <paper-shadow z="1"></paper-shadow>
-    <div id="card-header" class="colored" layout horizontal center on-click="{{headerClick}}">
-      <div class="row" style="width: 100%">
-        <div class="col-md-3">Gruppe {{group.group}}</div>
-        <div class="col-md-3">{{group.minECTS}}-{{group.maxECTS}} ECTS</div>
-        <div class="col-md-3">{{group.currentECTS}} erworben</div>
-        <div class="col-md-3">0 eingeschrieben</div>
-      </div>
+    <div id="card-header" class="colored" on-click="{{headerClick}}">
+        Gruppe {{group.group}}
+        <div style="float:right;">{{group.minECTS}} bis {{group.maxECTS}} ECTS nötig, davon {{group.currentECTS}} erworben und {{currentECTS(subscriptions)}} eingeschrieben</div>
     </div>
   </template>
   <script>
-  Polymer({});
+  Polymer({
+    currentECTS: function(subscriptions) {
+      var ects = 0;
+      console.log(subscriptions);
+      for (module of this.group.modules) {
+        if (subscriptions[module.id] && !subscriptions[module.id].grade) {
+          ects += module.credits;
+        }
+      }
+      return ects;
+    }
+  });
   </script>
 </polymer-element>

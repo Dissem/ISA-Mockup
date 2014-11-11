@@ -55,14 +55,14 @@
 
     <student-service student="{{student}}"></student-service>
     <paper-shadow z="1"></paper-shadow>
-    <div id="card-header" layout horizontal center on-click="{{headerClick}}">
+    <div id="card-header" on-click="{{headerClick}}">
       <div class="row">
         <div class="col-sm-6">
           {{module.title}}
         </div>
         <div class="col-sm-2">{{stateText(student, subscription)}}</div>
         <div class="col-sm-2">{{module.required?'Pflichtmodul':''}}</div>
-        <div id="credits" class="col-sm-2">{{module.credits}} ECTS</div>
+        <div id="credits" class="col-sm-2" style="text-align:right">{{module.credits}} ECTS</div>
       </div>
     </div>
     <div id="description" hidden="true">
@@ -121,7 +121,6 @@
       this.fire('module-subscribe', this.module);
     },
     stateText: function(student, subscription) {
-      console.log(subscription, student.semester);
       if (student.modules) {
         var moduleState = student.modules[this.module.id];
         if (moduleState) {
