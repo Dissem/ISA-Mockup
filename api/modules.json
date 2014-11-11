@@ -25,14 +25,6 @@
             "time" : "18:10-21:30"
           }
         ],
-        "subscription" : {
-          "semester" : 7,
-          "implementation" : {
-            "place" : "Bern",
-            "day" : "Di",
-            "time" : "18:10-21:30"
-          }
-        },
         "possible" : [7]
       },
       {
@@ -40,6 +32,7 @@
         "title" : "Berechenbarkeit und Komplexität",
         "credits" : 2,
         "group" : "A",
+        "required" : true,
         "description" : "Dieses Modul hat zum Ziel, die Studierenden in die Begriffe Berechenbarkeit und Komplexität eines Problemes einzuführen. Durch das Studium der Berechenbarkeit lernen die Studierenden, dass für gewisse Probleme keine Algorithmen existieren und deshalb auch keine Lösung in Betracht gezogen werden kann. Mit dem Studium der Komplexität werden sich die Studierenden bewusst, dass zahlreiche praktischen Probleme nicht in einer \"vernünftigen\" Zeit gelöst werden können. Wenn keine exakte Lösung effizient berechnet werden kann, existieren gewisse Approximationen. Eine kurze Präsentation solcher Approximationen wie zum Beispiel genetischer Algorithmen rundet das Modul ab.",
         "teacher" : {"name": "Olivier Biberstein", "email":"olivier.biberstein@example.com"},
         "grading" : "Abgesetzte Prüfung (Pa)",

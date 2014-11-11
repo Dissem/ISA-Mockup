@@ -18,6 +18,7 @@
     </style>
     
     <module-service id="service" modules="{{groups}}" filter="{{filter}}"></module-service>
+    <student-service student="{{student}}"></student-service>
 
     <paper-dialog id="subscribeDialog" heading="Einschreiben">
       <p>Semester: 
@@ -44,7 +45,8 @@
         <template id="modules" repeat="{{module in group.modules}}">
           <module-row
             module="{{module}}"
-            on-module-subscribe="{{showSubscribeDialog}}">
+            on-module-subscribe="{{showSubscribeDialog}}"
+            subscription="{{student.modules[module.id].subscription}}">
           </module-row>
         </template>
         <span style="height:2em"></span>
@@ -58,6 +60,7 @@
       this.filter = {"id" : "semester", "selection" : 7};
     },
     showSubscribeDialog: function(event, detail, sender) {
+      this.sender = sender;
       this.module = detail;
       if (detail.subscription) {
         this.selectedSemester = detail.subscription.semester;
@@ -76,11 +79,14 @@
           break;
         }
       }
-      this.module.subscription = {
+      var moduleState = {};
+      moduleState.subscription = {
           "semester" : this.$.semester.selected,
           "implementation" : impl
-        }
-      console.log(this.module.subscription);
+        };
+      this.student.modules[this.module.id] = moduleState;
+      this.sender.subscription = moduleState.subscription;
+      console.log(this.student.modules[this.module.id]);
     }
   });
   </script>

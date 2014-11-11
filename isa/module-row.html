@@ -10,7 +10,7 @@
 <link rel="import" href="../components/paper-menu-button/paper-menu-button.html">
 <link rel="import" href="service/student-service.html">
 
-<polymer-element name="module-row" attributes="module">
+<polymer-element name="module-row" attributes="module subscription">
   <template>
     <link rel="stylesheet" href="isa.css">
     <link rel="stylesheet" href="bootstrap-grid.css">
@@ -36,6 +36,9 @@
     #card-header, #description {
       padding: 10px;
     }
+    #credits {
+      text-align: right;
+    }
     .day {
       width: 2em;
       display: inline-block;
@@ -45,13 +48,22 @@
       width: 5.5em;
       display: inline-block;
     }
+    .row {
+      width: 100%;
+    }
     </style>
 
     <student-service student="{{student}}"></student-service>
     <paper-shadow z="1"></paper-shadow>
     <div id="card-header" layout horizontal center on-click="{{headerClick}}">
-      {{module.title}}
-      <span id="credits">{{module.credits}} ECTS</span>
+      <div class="row">
+        <div class="col-sm-6">
+          {{module.title}}
+        </div>
+        <div class="col-sm-2">{{stateText(student)}}</div>
+        <div class="col-sm-2">{{module.required?'Pflichtmodul':''}}</div>
+        <div id="credits" class="col-sm-2">{{module.credits}} ECTS</div>
+      </div>
     </div>
     <div id="description" hidden="true">
       <div class="row">
@@ -70,10 +82,10 @@
           </template>
         </div>
         <div class="col-md-12" style="text-align:right">
-          <span class="colored-text" hidden?="{{!module.subscription}}">
-            Eingeschrieben für {{module.subscription.implementation.day}} {{module.subscription.implementation.time}} in {{module.subscription.implementation.place}}
+          <span class="colored-text" hidden?="{{!subscription}}">
+            Eingeschrieben für {{subscription.implementation.day}} {{subscription.implementation.time}} in {{subscription.implementation.place}}
           </span>
-          <paper-button class="colored" raised hidden?="{{!isSubscribePossible(student)}}" on-click="{{subscribe}}" style="margin-left: 2em">{{isChangePossible(module.subscription)?'Ändern':'Einschreiben'}}</paper-button>
+          <paper-button class="colored" raised hidden?="{{!isSubscribePossible(student)}}" on-click="{{subscribe}}" style="margin-left: 2em">{{subscription?'Ändern':'Einschreiben'}}</paper-button>
         </div>
       </div>
       <content></content>
@@ -81,6 +93,11 @@
   </template>
   <script>
   Polymer({
+    created: function() {
+      if (this.student && this.student.modules[this.module.id]) {
+        this.subscription = this.student.modules[this.module.id].subscription;
+      }
+    },
     headerClick: function(event, detail, sender) {
       this.$.description.hidden = !this.$.description.hidden;
     },
@@ -100,11 +117,25 @@
       }
       return false;
     },
-    isChangePossible: function(subscribtion) {
-      return !(!subscribtion);
-    },
     subscribe: function() {
       this.fire('module-subscribe', this.module);
+    },
+    stateText: function(student) {
+      if (student && student.modules && student.modules[this.module.id]) {
+        var moduleState = student.modules[this.module.id];
+        if (moduleState.grade) {
+          return 'Besucht ('+moduleState.grade+')';
+        }
+        if (moduleState.subscription && student.semester) {
+          if (moduleState.subscription.semester == student.semester) {
+            return 'Laufend';
+          }
+          if (moduleState.subscription.semester > student.semester) {
+            return 'Eingeschrieben';
+          }
+        }
+      }
+      return '';
     }
   });
   </script>

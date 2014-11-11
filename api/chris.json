@@ -7,6 +7,18 @@
 		"town" : "Burgdorf",
 		"country" : "Switzerland"
 	},
+	"modules" : {
+		"BTI7083" : {
+			"subscription" : {
+	          "semester" : 7,
+	          "implementation" : {
+	            "place" : "Bern",
+	            "day" : "Di",
+	            "time" : "18:10-21:30"
+	          }
+	        }
+		}
+	},
 	"phone" : "079 555 06 32",
 	"semester" : 7,
 	"openSemesters" : [8,9]
