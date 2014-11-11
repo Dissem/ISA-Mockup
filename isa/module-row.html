@@ -60,7 +60,7 @@
         <div class="col-sm-6">
           {{module.title}}
         </div>
-        <div class="col-sm-2">{{stateText(student)}}</div>
+        <div class="col-sm-2">{{stateText(student, subscription)}}</div>
         <div class="col-sm-2">{{module.required?'Pflichtmodul':''}}</div>
         <div id="credits" class="col-sm-2">{{module.credits}} ECTS</div>
       </div>
@@ -120,19 +120,23 @@
     subscribe: function() {
       this.fire('module-subscribe', this.module);
     },
-    stateText: function(student) {
-      if (student && student.modules && student.modules[this.module.id]) {
+    stateText: function(student, subscription) {
+      console.log(subscription, student.semester);
+      if (student.modules) {
         var moduleState = student.modules[this.module.id];
-        if (moduleState.grade) {
-          return 'Besucht ('+moduleState.grade+')';
+        if (moduleState) {
+          subscription = moduleState.subscription;
         }
-        if (moduleState.subscription && student.semester) {
-          if (moduleState.subscription.semester == student.semester) {
-            return 'Laufend';
-          }
-          if (moduleState.subscription.semester > student.semester) {
-            return 'Eingeschrieben';
-          }
+      }
+      if (moduleState && moduleState.grade) {
+        return 'Besucht ('+moduleState.grade+')';
+      }
+      if (subscription && student.semester) {
+        if (subscription.semester == student.semester) {
+          return 'Laufend';
+        }
+        if (subscription.semester > student.semester) {
+          return 'Eingeschrieben';
         }
       }
       return '';
