@@ -29,7 +29,7 @@
     }
     </style>
 
-    <paper-shadow z="{{active?2:1}}"></paper-shadow>
+    <paper-shadow z="{{active?0:1}}"></paper-shadow>
     <div id="title">
       <content select="#title"></content>
     </div>
@@ -48,6 +48,11 @@
     },
     activeChanged: function(oldValue, newValue) {
       this.active = newValue;
+      if (newValue) {
+        this.classList.add('active-big-tab');
+      } else {
+        this.classList.remove('active-big-tab');
+      }
     },
     tabClick: function(event, detail, sender) {
       this.active = true;

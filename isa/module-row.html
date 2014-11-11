@@ -70,7 +70,7 @@
           </template>
         </div>
         <div class="col-md-12" style="text-align:right">
-          <span hidden?="{{!module.subscription}}">
+          <span class="colored-text" hidden?="{{!module.subscription}}">
             Eingeschrieben für {{module.subscription.implementation.day}} {{module.subscription.implementation.time}} in {{module.subscription.implementation.place}}
           </span>
           <paper-button class="colored" raised hidden?="{{!isSubscribePossible(student)}}" on-click="{{subscribe}}" style="margin-left: 2em">{{isChangePossible(module.subscription)?'Ändern':'Einschreiben'}}</paper-button>
