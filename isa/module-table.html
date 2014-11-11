@@ -1,0 +1,87 @@
+<link rel="import" href="../components/polymer/polymer.html">
+<link rel="import" href="../components/paper-dialog/paper-dialog.html">
+<link rel="import" href="../components/paper-dialog/paper-dialog-transition.html">
+<link rel="import" href="../components/paper-radio-group/paper-radio-group.html">
+<link rel="import" href="../components/paper-radio-button/paper-radio-button.html">
+<link rel="import" href="service/module-service.html">
+<link rel="import" href="module-header.html">
+<link rel="import" href="module-row.html">
+
+<polymer-element name="module-table" attributes="filter groups">
+  <template>
+    <link rel="stylesheet" href="isa.css">
+    <style>
+    :host {
+      display: block;
+      width: 100%;
+    }
+    </style>
+    
+    <module-service id="service" modules="{{groups}}" filter="{{filter}}"></module-service>
+
+    <paper-dialog id="subscribeDialog" heading="Einschreiben">
+      <p>Semester: 
+        <paper-radio-group id="semester" selected="{{selectedSemester}}">
+          <template repeat="{{module.possible}}">
+            <paper-radio-button name="{{}}" label="{{}}"></paper-radio-button>
+          </template>
+        </paper-radio-group>
+      </p>
+      <p>Durchführung:
+        <paper-radio-group id="implementation" selected="{{selectedImpl}}">
+          <template repeat="{{impl in module.implementations}}">
+            <paper-radio-button name="{{impl.place}}{{impl.day}}" label="{{impl.place}} ({{impl.day}} {{impl.time}})"></paper-radio-button>
+          </template>
+        </paper-radio-group>
+      </p>
+      <paper-button label="Abbrechen" affirmative></paper-button>
+      <paper-button label="OK" affirmative autofocus class="colored" on-click="{{subscribe}}"></paper-button>
+    </paper-dialog>
+
+    <div layout vertical center>
+      <template id="grouplist" repeat="{{group in groups}}">
+        <module-header group="{{group}}"></module-header>
+        <template id="modules" repeat="{{module in group.modules}}">
+          <module-row
+            module="{{module}}"
+            on-module-subscribe="{{showSubscribeDialog}}">
+          </module-row>
+        </template>
+      </template>
+    </div>
+  </template>
+
+  <script>
+  Polymer({
+    created: function() {
+      this.filter = {"id" : "semester", "selection" : 7};
+    },
+    showSubscribeDialog: function(event, detail, sender) {
+      this.module = detail;
+      if (detail.subscription) {
+        this.selectedSemester = detail.subscription.semester;
+        this.selectedImpl = detail.subscription.implementation.place + detail.subscription.implementation.day;
+      } else {
+        this.selectedSemester = "";
+        this.selectedImpl = "";
+      }
+      this.$.subscribeDialog.toggle();
+    },
+    subscribe: function(event, detail, sender) {
+      var impl;
+      for (i of this.module.implementations) {
+        if (this.$.implementation.selected == i.place+i.day) {
+          impl = i;
+          break;
+        }
+      }
+      this.module.subscription = {
+          "semester" : this.$.semester.selected,
+          "implementation" : impl
+        }
+      console.log(this.module.subscription);
+    }
+  });
+  </script>
+
+</polymer-element>

@@ -1,0 +1,19 @@
+.colored {
+    background-color: #03a9f4;
+    color: white;
+}
+.container {
+	margin: 5px auto;
+}
+.card {
+	padding: 20px;
+	background-color: #ffffff;
+}
+
+paper-radio-group paper-radio-button::shadow #ink[checked] {
+	color: #03a9f4;
+}
+
+paper-radio-group paper-radio-button::shadow #onRadio {
+	background-color: #03a9f4;
+}

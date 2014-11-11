@@ -1,0 +1,62 @@
+<link rel="import" href="../components/polymer/polymer.html">
+<link rel="import" href="../components/paper-shadow/paper-shadow.html">
+<link rel="import" href="../components/paper-shadow/paper-shadow.css">
+<link rel="import" href="../components/paper-button/paper-button.html">
+
+<polymer-element name="big-tab" attributes="items active selection" on-click="{{tabClick}}">
+  <template>
+    <link rel="stylesheet" href="isa.css">
+    <link rel="stylesheet" href="bootstrap-grid.css">
+    <style>
+    :host {
+      display: block;
+      margin-top: 20px;
+      padding: 20px;
+      background-color: #ffffff;
+    }
+    #title {
+      padding-bottom: 0.5em;
+      font-weight: 500;
+    }
+    paper-button {
+      padding: 0.25em 0.35em;
+      margin: 0.15em;
+      min-width: 1.8em;
+    }
+    paper-button[id='{{active?selection:''}}'] {
+      background-color: #03a9f4;
+      color: #fff;
+    }
+    </style>
+
+    <paper-shadow z="{{active?2:1}}"></paper-shadow>
+    <div id="title">
+      <content select="#title"></content>
+    </div>
+    <div>
+      <template repeat="{{items | split}}">
+        <paper-button raised id="{{}}" on-click={{select}}>{{}}</paper-button>
+      </template>
+    </div>
+    <content></content>
+  </template>
+  <script>
+  Polymer({
+    active: false,
+    split: function(value) {
+      return value.split(/\s*,\s*/);
+    },
+    activeChanged: function(oldValue, newValue) {
+      this.active = newValue;
+    },
+    tabClick: function(event, detail, sender) {
+      this.active = true;
+      this.fire('selection-tap', {"id" : this.id, "selection" : this.selection});
+    },
+    select: function(event, detail, sender) {
+      this.selection = sender.id;
+      this.fire('selection-tap', {"id" : this.id, "selection" : this.selection});
+    }
+  });
+  </script>
+</polymer-element>

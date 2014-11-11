@@ -1,0 +1,13 @@
+{
+	"name" : "Christian Basler",
+	"email" : "chrigu.basler@example.com",
+	"address" : {
+		"street" : "Bernstrasse 143",
+		"zip" : 3400,
+		"town" : "Burgdorf",
+		"country" : "Switzerland"
+	},
+	"phone" : "079 555 06 32",
+	"semester" : 7,
+	"openSemesters" : [8,9]
+}

@@ -1,0 +1,162 @@
+[
+  {
+    "group" : "A",
+    "minECTS" : 74,
+    "maxECTS" : 82,
+    "currentECTS" : 46,
+    "modules" : [
+      {
+        "id": "BTI7083",
+        "title" : "User Centered Design",
+        "credits" : 4,
+        "group" : "A",
+        "description" : "Usability oder weiter gefasst User Experience ist bei heutigen Websites und Applikationen nicht mehr «nice-to-have» sondern ein grundlegender Erfolgsfaktor. In diesem Modul werden die Studierenden für die Bedürfnisse der Anwender sensibilisiert und erfahren wie man eine gute User Experience erreicht.\nDazu lernen sie die Methode des User-Centered Design von Grund auf: Bedürfnisanalyse, Konzeption, Prototyping, Durchführen und Auswerten von Usability-Tests und inhaltliche Dokumentation. Es werden zudem die Grundlagen des Interaktionsdesigns, der Wahrnehmungspsychologie sowie der Gestaltung im Web vermittelt. Sie lernen Eigenheiten des Mobile Design kennen und wissen, was ein semantisch korrekter Code ist und wie die Accessibility gewährleistet werden kann.\nDer User-Centered-Design-Prozess wird anhand eines konkreten Projekts in der Gruppe geübt.",
+        "teacher" : {"name": "Sibylle Peuker", "email":"sibylle.peuker@example.com"},
+        "grading" : "Erfahrungsnachweis (E)",
+        "implementations" : [
+          {
+            "place" : "Biel",
+            "day" : "Di",
+            "time" : "12:45-16:10"
+          },
+          {
+            "place" : "Bern",
+            "day" : "Di",
+            "time" : "18:10-21:30"
+          }
+        ],
+        "subscription" : {
+          "semester" : 7,
+          "implementation" : {
+            "place" : "Bern",
+            "day" : "Di",
+            "time" : "18:10-21:30"
+          }
+        },
+        "possible" : [7]
+      },
+      {
+        "id": "BTI7065",
+        "title" : "Berechenbarkeit und Komplexität",
+        "credits" : 2,
+        "group" : "A",
+        "description" : "Dieses Modul hat zum Ziel, die Studierenden in die Begriffe Berechenbarkeit und Komplexität eines Problemes einzuführen. Durch das Studium der Berechenbarkeit lernen die Studierenden, dass für gewisse Probleme keine Algorithmen existieren und deshalb auch keine Lösung in Betracht gezogen werden kann. Mit dem Studium der Komplexität werden sich die Studierenden bewusst, dass zahlreiche praktischen Probleme nicht in einer \"vernünftigen\" Zeit gelöst werden können. Wenn keine exakte Lösung effizient berechnet werden kann, existieren gewisse Approximationen. Eine kurze Präsentation solcher Approximationen wie zum Beispiel genetischer Algorithmen rundet das Modul ab.",
+        "teacher" : {"name": "Olivier Biberstein", "email":"olivier.biberstein@example.com"},
+        "grading" : "Abgesetzte Prüfung (Pa)",
+        "implementations" : [
+          {
+            "place" : "Bern",
+            "day" : "Di",
+            "time" : "16:15-17:55"
+          },
+          {
+            "place" : "Bern",
+            "day" : "Do",
+            "time" : "19:55-21:30"
+          }
+        ],
+        "subscription" : {
+          "semester" : 7,
+          "implementation" : {
+            "place" : "Bern",
+            "day" : "Do",
+            "time" : "19:55-21:30"
+          }
+        },
+        "possible" : [7]
+      }
+    ]
+  },
+  {
+    "group" : "B",
+    "minECTS" : 26,
+    "maxECTS" : 32,
+    "currentECTS" : 18,
+    "modules" : []
+  },
+  {
+    "group" : "C",
+    "minECTS" : 44,
+    "maxECTS" : 52,
+    "currentECTS" : 16,
+    "modules" : [
+      {
+        "id": "BTI7252",
+        "title" : "Development of Mobile Applications",
+        "credits" : 8,
+        "group" : "A",
+        "description" : "Es wird ein tiefer Einblick hinter die Kulissen des Mobile Computing auf Smartphones und TabletPCs geworfen. Dies umfasst sowohl die Welt des Ubiquitous Computing auf Embedded Devices als auch die augmented Reality auf dem Smartphone. Dazu kommt angewandte Sicherheit, welche zeigt, wie momentan mit den Daten umgegangen wird und wie mit den Daten umgegangen werden sollte.\nSämtliche Module basieren auf Komponenten der Open Source. Dies um zu demonstrieren, wie mächtig und vielfältig Open Source ist. So wird meist Linux als OS der einzelnen Komponenten genutzt (Raspberry Pi), sodass die Applikationsentwickler die Hoheit über das System erringen und halten können.\nBerührt das Internet Of Things im Grundsatz das Modul Web und Business, kommen in diesem Modul aber auch Aspekte der Security und der Computer Perception and Virtual Reality zum Zuge. In diesem Modul kommen alle genannten Teilgebiete zur Anwendung.",
+        "teacher" : {"name": "Reto Koenig", "email":"reto.koenig@example.com"},
+        "grading" : "Mündliche Schlussprüfung",
+        "implementations" : [
+          {
+            "place" : "Biel",
+            "day" : "Fr",
+            "time" : "08:20-16:10"
+          }
+        ],
+        "subscription" : {
+          "semester" : 7,
+          "implementation" : {
+            "place" : "Biel",
+            "day" : "Fr",
+            "time" : "08:20-16:10"
+          }
+        },
+        "possible" : [7]
+      }
+    ]
+  },
+  {
+    "group" : "D",
+    "minECTS" : 18,
+    "maxECTS" : 30,
+    "currentECTS" : 0,
+    "modules" : [
+      {
+        "id": "BTI4242",
+        "title" : "Doing Magic With Computers",
+        "credits" : 4,
+        "group" : "D",
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, aperiam repellat exercitationem perferendis ad unde esse non asperiores recusandae eum ea neque illum sint dolor error earum ipsum optio similique.",
+        "teacher" : {"name" : "Christian Basler", "email" : "chrigu.basler@example.com" },
+        "grading" : "Erfahrungsnachweis (E)",
+        "implementations" : [
+          {
+            "place" : "Burgdorf",
+            "day" : "Fr",
+            "time" : "18:10-21:30"
+          },
+          {
+            "place" : "Bern",
+            "day" : "Mi",
+            "time" : "18:10-21:30"
+          }
+        ],
+        "possible": [8,9]
+      },
+      {
+        "id": "BTI7526",
+        "title" : "Cloud Computing",
+        "credits" : 2,
+        "group" : "D",
+        "description" : "Die Studierenden werden in den Aufbau und die Anwendung von Cloud Infrastrukturen und Diensten eingeführt. Sie erarbeiten sich eine Übersicht über aktuelle Cloud Angebote. Sie kennen Benutzer- und Programmier-Schnittstellen von Cloud Diensten. Sie erlernen den Aufbau einer Cloud Infrastruktur im Labor mit Hilfe von Open Source Cloud Software. Sie kennen die Probleme und Risiken des Einsatzes von Cloud Lösungen.",
+        "teacher" : {"name" : "Hansjörg Wenger", "email" : "hansjoerg.wenger@example.com" },
+        "grading" : "Erfahrungsnachweis (E)",
+        "implementations" : [
+          {
+            "place" : "Burgdorf",
+            "day" : "Mo",
+            "time" : "18:10-21:30"
+          },
+          {
+            "place" : "Bern",
+            "day" : "Di",
+            "time" : "18:10-21:30"
+          }
+        ],
+        "possible": [8,9]
+      }
+    ]
+  }
+]

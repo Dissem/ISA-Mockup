@@ -1,0 +1,47 @@
+<link rel="import" href="../components/polymer/polymer.html">
+<link rel="import" href="../components/paper-shadow/paper-shadow.html">
+<link rel="import" href="../components/paper-shadow/paper-shadow.css">
+<link rel="import" href="../components/core-icon-button/core-icon-button.html">
+<link rel="import" href="../components/core-dropdown/core-dropdown.html">
+<link rel="import" href="../components/paper-button/paper-button.html">
+<link rel="import" href="../components/paper-dropdown-menu/paper-dropdown-menu.html">
+<link rel="import" href="../components/paper-item/paper-item.html">
+
+<polymer-element name="module-header" attributes="group">
+  <template>
+    <link rel="stylesheet" href="isa.css">
+    <link rel="stylesheet" href="bootstrap-grid.css">
+    <style>
+    :host {
+      display: block;
+      position: relative;
+      background-color: white;
+      padding: 0px;
+      width: 100%;
+      font-weight: 300;
+      margin-bottom: 3px;
+    }
+    #card-header #credits {
+      top: 10px;
+      right: 10px;
+      position: absolute;
+    }
+    #card-header {
+      padding: 10px;
+    }
+    </style>
+
+    <paper-shadow z="1"></paper-shadow>
+    <div id="card-header" class="colored" layout horizontal center on-click="{{headerClick}}">
+      <div class="row" style="width: 100%">
+        <div class="col-md-3">Gruppe {{group.group}}</div>
+        <div class="col-md-3">{{group.minECTS}}-{{group.maxECTS}} ECTS</div>
+        <div class="col-md-3">{{group.currentECTS}} erworben</div>
+        <div class="col-md-3">0 eingeschrieben</div>
+      </div>
+    </div>
+  </template>
+  <script>
+  Polymer({});
+  </script>
+</polymer-element>

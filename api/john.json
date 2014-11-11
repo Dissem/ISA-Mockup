@@ -1,0 +1,13 @@
+{
+	"name" : "John Doe",
+	"email" : "john.doe@bfh.ch",
+	"address" : {
+		"street" : "Unknown 0",
+		"zip" : 3400,
+		"town" : "Burgdorf",
+		"country" : "Switzerland"
+	},
+	"phone" : "079 555 12 33",
+	"semester" : 9,
+	"openSemesters" : [7,9]
+}

@@ -1,0 +1,55 @@
+<link rel="import" href="../components/polymer/polymer.html">
+<link rel="import" href="service/student-service.html">
+<link rel="import" href="module-table.html">
+<link rel="import" href="big-tab.html">
+
+<polymer-element name="module-tab" attributes="items">
+  <template>
+    <link rel="stylesheet" href="isa.css">
+    <link rel="stylesheet" href="bootstrap-grid.css">
+    <style>
+    :host {
+      display: block;
+      margin-top: 20px;
+      padding: 20px;
+    }
+    </style>
+
+    <student-service student="{{student}}"></student-service>
+    <div class="container row">
+      <div id="bigtabs" class="col-md-3">
+        <big-tab id="semester" items="1,2,3,4,5,6,7,8,9" selection="{{student.semester}}"
+          active="true" on-selection-tap="{{selection}}">
+          <span id="title">Semester</span>
+        </big-tab>
+        <big-tab id="group" items="A,B,C,D" selection="A"
+          on-selection-tap="{{selection}}">
+          <span id="title">Gruppen</span>
+        </big-tab>
+        <big-tab id="state" items="A-E,F-FX,Offen" selection="A-E"
+          on-selection-tap="{{selection}}">
+          <span id="title">Status</span>
+        </big-tab>
+      </div>
+      <div class="card col-md-9">
+        <paper-shadow z="2"></paper-shadow>
+        <module-table id="modules"></module-table>
+      </div>
+    </div>
+  </template>
+  <script>
+  Polymer({
+    split: function(value) {
+      return value.split(/\s*,\s*/);
+    },
+    selection: function(event, detail, sender) {
+      var tabs = this.$.bigtabs.querySelectorAll('big-tab');
+      for (i=0; i<tabs.length; i++) {
+        var tab = tabs[i];
+        tab.active = (tab.id == detail.id);
+      }
+      this.$.modules.filter = detail;
+    }
+  });
+  </script>
+</polymer-element>
