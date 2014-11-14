@@ -27,6 +27,34 @@
         ],
         "possible" : [7]
       },
+     {
+        "id": "BZG1151",
+        "title" : "Diskrete Mathematik",
+        "credits" : 6,
+        "group" : "A",
+        "description" : "In diesem Modul werden die folgenden Themen und Inhalte behandelt:
+    Mengenlehre und Logik
+    Relationen und Funktionen
+    Rekursion, Iteration und vollständige Induktion
+    Elementare Zahlentheorie mit Anwendungen in der Kryptographie
+    Graphentheorie
+",
+        "teacher" : {"name": "Dozent Meyer Christian Dr.", "email":"meyer.christian@example.com"},
+        "grading" : "Erfahrungsnachweis (E)",
+        "implementations" : [
+          {
+            "place" : "Biel",
+            "day" : "Mo",
+            "time" : "08:20-09:55"
+          },
+          {
+            "place" : "Bern",
+            "day" : "Di",
+            "time" : "18:10-19:45"
+          }
+        ],
+        "possible" : [1]
+      },
       {
         "id": "BTI7065",
         "title" : "Berechenbarkeit und Komplexität",
