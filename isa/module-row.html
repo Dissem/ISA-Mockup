@@ -30,7 +30,7 @@
       position: absolute;
     }
     #card-header {
-      background-color: #fafafa;
+      background-color: {{getColor(module, student, subscription)}};
       cursor: pointer;
     }
     #card-header, #description {
@@ -139,6 +139,28 @@
         }
       }
       return '';
+    },
+    getColor: function(module, student, subscription) {
+      if (student) {
+        if (student.modules) {
+          var moduleState = student.modules[this.module.id];
+          if (moduleState) {
+            subscription = moduleState.subscription;
+          }
+        }
+        if (moduleState && moduleState.grade) {
+          return '#d9f4c3';
+        }
+        if (subscription && student.semester) {
+          if (subscription.semester == student.semester) {
+            return '#f4f1c3';
+          }
+          if (subscription.semester > student.semester) {
+            return '#c3e5f4';
+          }
+        }
+      }
+      return '#fafafa';
     }
   });
   </script>
