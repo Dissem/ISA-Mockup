@@ -82,6 +82,73 @@
       }
     ]
   },
+     {
+        "id": "BZG1151",
+        "title" : "Diskrete Mathematik",
+        "credits" : 6,
+        "group" : "A",
+        "description" : "In diesem Modul werden die folgenden Themen und Inhalte behandelt: \nMengenlehre und Logik\nRelationen und Funktionen Rekursion, Iteration und vollständige Induktion\n Elementare Zahlentheorie mit Anwendungen in der Kryptographie\n    Graphentheorie ",
+        "teacher" : {"name": "Dozent Meyer Christian Dr.", "email":"meyer.christian@example.com"},
+        "grading" : "Erfahrungsnachweis (E)",
+        "implementations" : [
+          {
+            "place" : "Biel",
+            "day" : "Mo",
+            "time" : "08:20-09:55"
+          },
+          {
+            "place" : "Bern",
+            "day" : "Di",
+            "time" : "18:10-19:45"
+          }
+        ],
+        "possible" : [1]
+      },
+     {
+        "id": "BTI7051p",
+        "title" : "Einführung in die Programmierung",
+        "credits" : 6,
+        "group" : "A",
+        "description" : "In diesem Modul werden die folgenden Themen und Inhalte behandelt:\nEinführung in das Konzept der Programmiersprachen, die Java Programmierplattform; \nObjektbasierte Programmierung: Klassen, Objekte, Methoden, Datentypen, Zahlen, Zeichenketten, Kontrollstrukturen;\nEinführung in die graphische Programmierung: einfache graphische Komponenten, Farben, Schriften; \n Tabellen (Arrays, Listen); \n Design-Elemente: Klassen-Design, Kohesion und Koppelung, Methodenkategorien, immutable Klassen; \n    Test und Deployment von Programmen: Unit Test, Packages, Lokalisierung von Klassen, .JAR-Dateien; \n    Java Interfaces, Polymorphismus, Event Behandlung, interne Klassen",
+        "teacher" : {"name": "Hudritsch Marcus", "email":"vorname.nachname@example.com"},
+        "grading" : "Erfahrungsnachweis (Pb)",
+        "implementations" : [
+          {
+            "place" : "Biel",
+            "day" : "Mo",
+            "time" : "08:20-09:55"
+          },
+          {
+            "place" : "Bern",
+            "day" : "Di",
+            "time" : "19:55 - 21:30"
+          }
+        ],
+        "possible" : [1]
+      },
+{
+        "id": "BTI7061p",
+        "title" : "Grundlagen der Informatik",
+        "credits" : 6,
+        "group" : "A",
+        "In diesem Modul werden die folgenden Themen und Inhalte behandelt:Computermodell: Architektur, Funktionsweise Darstellung von Grössen: Numerierungssysteme, physische Darstellung von Werten, Arithmetik Der Prozessor: Registertypen, Programmsegmentierung (mit der Programmvorbereitung angeknüpft), Speicheradressierungen, Flaggen Programm-Vorbereitung und -Test: Kompilator, Linker, Loader, Debugger (Beispiel in einer Windows und/oder Unix/Linux Umgebung) Stapel und Unterprogramme: Funktionsaufrufe, Parameterübergabe, Rückwertübergabe, Stapelrahmen, Unterbrechungen Einführung in die C Programmierungssprache: Typen, Variablen, Funktionen (Ähnlichkeiten/Unterschiede gegenüber Java), Ausdrücke (Operatoren und ihre Präzedenzen), Argumente, Umgebungsvariablen während Programmstart, C/Assembler-Zusammenarbeit Schnittstellen mit den Betriebssystemen (Windows und/oder Unix/Linux): Prozesse, besonders die Unterschiede zwischen Windows und Unix/Linux, Threads (Parallelen zu Java), Ereignisse, Signale, Meldungen, Sockets-Mechanismus.
+",
+        "teacher" : {"name": "Buechel Oliver", "email":"vorname.nachname@example.com"},
+        "grading" : "Erfahrungsnachweis (Pb)",
+        "implementations" : [
+          {
+            "place" : "Biel",
+            "day" : "Mo",
+            "time" : "08:20-09:55"
+          },
+          {
+            "place" : "Bern",
+            "day" : "Mi",
+            "time" : "18:10-19:45"
+          }
+        ],
+        "possible" : [1]
+      },
   {
     "group" : "B",
     "minECTS" : 26,
@@ -89,6 +156,50 @@
     "currentECTS" : 18,
     "modules" : []
   },
+{
+        "id": "BZG3401p",
+        "title" : "English 1 intermediate",
+        "credits" : 2,
+        "group" : "B",
+        "description" : "Students are expected to prepare and improve the main skills of English comprehension in listening, reading, speaking and\n writing. Students should be able to apply the knowledge gained in the first module in reading, writing, speaking and listening skills.\n At the end of this course, students are expected to understand detailed information in texts, engage in listening activities as well as give a good speech on a topic of their knowledge or field.",
+        "teacher" : {"name": "Krebs Thomas", "email":"Krebs.Thomas@example.com"},
+        "grading" : "Erfahrungsnachweis (E)",
+        "implementations" : [
+          {
+            "place" : "Biel",
+            "day" : "Mo",
+            "time" : "08:20-09:55"
+          },
+          {
+            "place" : "Bern",
+            "day" : "Di",
+            "time" : "16:15 - 17:50"
+          }
+        ],
+        "possible" : [1]
+      },
+     {
+        "id": "BZG3411p",
+        "title" : "English 1 advanced ",
+        "credits" : 2,
+        "group" : "B",
+        "description" : "Students are expected to prepare and improve the main skills of English comprehension in listening, reading, speaking and writing. Students should be able to apply the knowledge gained in the first module in reading, writing, speaking and listening skills.",
+        "teacher" : {"name": "Millard-Helfer Peter", "email":"Millard.Peter@example.com"},
+        "grading" : "Erfahrungsnachweis (E)",
+        "implementations" : [
+          {
+            "place" : "Biel",
+            "day" : "Mo",
+            "time" : "08:20-09:55"
+          },
+          {
+            "place" : "Bern",
+            "day" : "Di",
+            "time" : "16:15 - 17:50"
+          }
+        ],
+        "possible" : [1]
+      },
   {
     "group" : "C",
     "minECTS" : 44,
