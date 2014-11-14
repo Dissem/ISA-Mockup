@@ -131,8 +131,7 @@
         "title" : "Grundlagen der Informatik",
         "credits" : 6,
         "group" : "A",
-        "In diesem Modul werden die folgenden Themen und Inhalte behandelt:Computermodell: Architektur, Funktionsweise Darstellung von Grössen: Numerierungssysteme, physische Darstellung von Werten, Arithmetik Der Prozessor: Registertypen, Programmsegmentierung (mit der Programmvorbereitung angeknüpft), Speicheradressierungen, Flaggen Programm-Vorbereitung und -Test: Kompilator, Linker, Loader, Debugger (Beispiel in einer Windows und/oder Unix/Linux Umgebung) Stapel und Unterprogramme: Funktionsaufrufe, Parameterübergabe, Rückwertübergabe, Stapelrahmen, Unterbrechungen Einführung in die C Programmierungssprache: Typen, Variablen, Funktionen (Ähnlichkeiten/Unterschiede gegenüber Java), Ausdrücke (Operatoren und ihre Präzedenzen), Argumente, Umgebungsvariablen während Programmstart, C/Assembler-Zusammenarbeit Schnittstellen mit den Betriebssystemen (Windows und/oder Unix/Linux): Prozesse, besonders die Unterschiede zwischen Windows und Unix/Linux, Threads (Parallelen zu Java), Ereignisse, Signale, Meldungen, Sockets-Mechanismus.
-",
+        "description" : "In diesem Modul werden die folgenden Themen und Inhalte behandelt:Computermodell: Architektur, Funktionsweise Darstellung von Grössen: Numerierungssysteme, physische Darstellung von Werten, Arithmetik Der Prozessor: Registertypen, Programmsegmentierung (mit der Programmvorbereitung angeknüpft), Speicheradressierungen, Flaggen Programm-Vorbereitung und -Test: Kompilator, Linker, Loader, Debugger (Beispiel in einer Windows und/oder Unix/Linux Umgebung) Stapel und Unterprogramme: Funktionsaufrufe, Parameterübergabe, Rückwertübergabe, Stapelrahmen, Unterbrechungen Einführung in die C Programmierungssprache: Typen, Variablen, Funktionen (Ähnlichkeiten/Unterschiede gegenüber Java), Ausdrücke (Operatoren und ihre Präzedenzen), Argumente, Umgebungsvariablen während Programmstart, C/Assembler-Zusammenarbeit Schnittstellen mit den Betriebssystemen (Windows und/oder Unix/Linux): Prozesse, besonders die Unterschiede zwischen Windows und Unix/Linux, Threads (Parallelen zu Java), Ereignisse, Signale, Meldungen, Sockets-Mechanismus.",
         "teacher" : {"name": "Buechel Oliver", "email":"vorname.nachname@example.com"},
         "grading" : "Erfahrungsnachweis (Pb)",
         "implementations" : [
@@ -197,9 +196,9 @@
           }
         ],
         "possible" : [1]
-      },]
+      },
+    ]
   },
-
   {
     "group" : "C",
     "minECTS" : 44,
