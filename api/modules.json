@@ -32,14 +32,8 @@
         "title" : "Diskrete Mathematik",
         "credits" : 6,
         "group" : "A",
-        "description" : "In diesem Modul werden die folgenden Themen und Inhalte behandelt:
-    Mengenlehre und Logik
-    Relationen und Funktionen
-    Rekursion, Iteration und vollständige Induktion
-    Elementare Zahlentheorie mit Anwendungen in der Kryptographie
-    Graphentheorie
-",
-        "teacher" : {"name": "Dozent Meyer Christian Dr.", "email":"meyer.christian@example.com"},
+        "description" : "In diesem Modul werden die folgenden Themen und Inhalte behandelt:\nMengenlehre und Logik\nRelationen und Funktionen\nRekursion, Iteration und vollständige Induktion\nElementare Zahlentheorie mit Anwendungen in der Kryptographie\nGraphentheorie",
+        "teacher" : {"name": "Meyer Christian Dr.", "email":"meyer.christian@example.com"},
         "grading" : "Erfahrungsnachweis (E)",
         "implementations" : [
           {
