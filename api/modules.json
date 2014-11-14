@@ -79,9 +79,7 @@
           }
         },
         "possible" : [7]
-      }
-    ]
-  },
+    },
      {
         "id": "BZG1151",
         "title" : "Diskrete Mathematik",
@@ -196,7 +194,9 @@
           }
         ],
         "possible" : [1]
-      },
+      }
+    ]
+  },
   {
     "group" : "C",
     "minECTS" : 44,
