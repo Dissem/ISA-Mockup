@@ -66,9 +66,10 @@
   Polymer('module-service', {
     publish: {
       "modules" : {
-        "value" : "",
+        "value" : undefined,
         "reflect" : true
       },
+      "allModules" : undefined,
       "filter" : ""
     },
     groupFilter: function(value) {
@@ -114,12 +115,13 @@
       }
     },
     created: function() {
+      this.allModules = [];
       this.modules = [];
     },
     modulesLoaded: function() {
       // Make a copy of the loaded data
-      this.modules = this.$.ajax.response.slice(0);
-      this.modules = this.groupFilter(this.modules);
+      this.allModules = this.$.ajax.response.slice(0);
+      this.modules = this.groupFilter(this.allModules);
     },
     /** 
      * Update the service with the current favorite value.

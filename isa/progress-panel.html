@@ -1,0 +1,95 @@
+<link rel="import" href="../components/polymer/polymer.html">
+<link rel="import" href="../components/paper-shadow/paper-shadow.html">
+<link rel="import" href="../components/paper-shadow/paper-shadow.css">
+<link rel="import" href="../components/paper-progress/paper-progress.html">
+
+<polymer-element name="progress-panel" attributes="student modules">
+  <template>
+    <link rel="stylesheet" href="isa.css">
+    <link rel="stylesheet" href="bootstrap-grid.css">
+    <style>
+    :host {
+      display: block;
+      margin-top: 20px;
+      padding: 20px;
+      background-color: #03a9f4;
+      color: #ffffff;
+      padding-bottom: 2em;
+    }
+    #title {
+      padding-bottom: 0px;
+      font-weight: 500;
+    }
+    paper-progress {
+      width: 100%;
+    }
+    .groupProgress {
+      clear:both;
+    }
+    .groupProgress paper-progress {
+      margin-top:0.3em;
+      width: 90%;
+      float: right;
+    }
+    paper-progress::shadow #activeProgress {
+      background-color: #65b523;
+    }
+    paper-progress::shadow #secondaryProgress {
+      background-color: #f4e500;
+    }
+    paper-progress::shadow #progressContainer {
+      background-color: #5dc9fa;
+    }
+    </style>
+
+    <paper-shadow z="1"></paper-shadow>
+    <div id="title">Studium</div>
+    <div>
+      <paper-progress value="{{student.credits}}" secondaryProgress="{{student.credits + subscribedCredits(student, modules)}}" max="180" style="margin-bottom:1em">
+        <paper-shadow z="1"></paper-shadow>
+      </paper-progress>
+      <template repeat="{{g in modules}}">
+        <div class="groupProgress">
+          <div style="float:left">{{g.group}}</div>
+          <paper-progress value="{{achievedCreditsInGroup(student, g)}}" secondaryProgress="{{achievedCreditsInGroup(student, g) + subscribedCreditsInGroup(student, g)}}" max="{{g.minETCS}}">
+            <paper-shadow z="1"></paper-shadow>
+          </paper-progress>
+        </div>
+      </template>
+    </div>
+    <content></content>
+  </template>
+  <script>
+  Polymer({
+    subscribedCredits: function(student, groups) {
+      var credits = 0;
+      for (group of groups) {
+        credits += this.subscribedCreditsInGroup(student, group);
+      }
+      return credits;
+    },
+    subscribedCreditsInGroup: function(student, group) {
+      var credits = 0;
+      if (student && group) {
+        for (module of group.modules) {
+          if (student.modules[module.id] && !student.modules[module.id].grade) {
+            credits += module.credits;
+          }
+        }
+      }
+      return credits;
+    },
+    achievedCreditsInGroup: function(student, group) {
+      var credits = 0;
+      if (student && group) {
+        for (module of group.modules) {
+          if (student.modules[module.id] && contains(['A', 'B', 'C', 'D', 'E'], student.modules[module.id].grade)) {
+            credits += module.credits;
+          }
+        }
+      }
+      return credits;
+    }
+  });
+  </script>
+</polymer-element>

@@ -41,7 +41,6 @@
   Polymer({
     currentECTS: function(subscriptions) {
       var ects = 0;
-      console.log(subscriptions);
       for (module of this.group.modules) {
         if (subscriptions[module.id] && !subscriptions[module.id].grade) {
           ects += module.credits;

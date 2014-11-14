@@ -1,6 +1,7 @@
 <link rel="import" href="../components/polymer/polymer.html">
 <link rel="import" href="service/student-service.html">
 <link rel="import" href="module-table.html">
+<link rel="import" href="progress-panel.html">
 <link rel="import" href="big-tab.html">
 
 <polymer-element name="module-tab" attributes="items">
@@ -15,9 +16,11 @@
     }
     </style>
 
+    <module-service id="service" allModules="{{groups}}"></module-service>
     <student-service student="{{student}}"></student-service>
     <div class="container">
       <div id="bigtabs" class="col-md-3">
+        <progress-panel student="{{student}}" modules="{{groups}}"></progress-panel>
         <big-tab id="semester" items="1,2,3,4,5,6,7,8,9"
           student="{{student}}" selection="{{student.semester}}"
           active="true" on-selection-tap="{{selection}}">

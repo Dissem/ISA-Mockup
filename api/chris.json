@@ -21,5 +21,6 @@
 	},
 	"phone" : "079 555 06 32",
 	"semester" : 7,
+	"credits" : 120,
 	"openSemesters" : [8,9]
 }

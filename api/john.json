@@ -9,5 +9,6 @@
 	},
 	"phone" : "079 555 12 33",
 	"semester" : 9,
+	"credits" : 0,
 	"openSemesters" : [7,9]
 }
