@@ -154,9 +154,7 @@
     "minECTS" : 26,
     "maxECTS" : 32,
     "currentECTS" : 18,
-    "modules" : []
-  },
-{
+    "modules" : [{
         "id": "BZG3401p",
         "title" : "English 1 intermediate",
         "credits" : 2,
@@ -199,7 +197,9 @@
           }
         ],
         "possible" : [1]
-      },
+      },]
+  },
+
   {
     "group" : "C",
     "minECTS" : 44,
