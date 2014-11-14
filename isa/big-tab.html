@@ -3,7 +3,7 @@
 <link rel="import" href="../components/paper-shadow/paper-shadow.css">
 <link rel="import" href="../components/paper-button/paper-button.html">
 
-<polymer-element name="big-tab" attributes="items active selection" on-click="{{tabClick}}">
+<polymer-element name="big-tab" attributes="items active selection student" on-click="{{tabClick}}">
   <template>
     <link rel="stylesheet" href="isa.css">
     <link rel="stylesheet" href="bootstrap-grid.css">
@@ -25,7 +25,25 @@
     }
     paper-button[id='{{active?selection:''}}'] {
       background-color: #03a9f4;
-      color: #fff;
+      color: #ffffff;
+    }
+    paper-button.done {
+      background-color: #d9f4c3;
+    }
+    paper-button.done[id='{{active?selection:''}}'] {
+      background-color: #4fae02;
+    }
+    paper-button.inProgress {
+      background-color: #f4f1c3;
+    }
+    paper-button.inProgress[id='{{active?selection:''}}'] {
+      background-color: #bbaf02;
+    }
+    paper-button.toDo {
+      background-color: #c3e5f4;
+    }
+    paper-button.toDo[id='{{active?selection:''}}'] {
+      background-color: #03a9f4;
     }
     </style>
 
@@ -34,8 +52,8 @@
       <content select="#title"></content>
     </div>
     <div>
-      <template repeat="{{items | split}}">
-        <paper-button raised id="{{}}" on-click={{select}}>{{}}</paper-button>
+      <template repeat="{{i in items | split}}">
+        <paper-button raised id="{{i}}" class="{{state(student, i)}}" on-click={{select}}>{{i}}</paper-button>
       </template>
     </div>
     <content></content>
@@ -61,6 +79,20 @@
     select: function(event, detail, sender) {
       this.selection = sender.id;
       this.fire('selection-tap', {"id" : this.id, "selection" : this.selection});
+    },
+    state: function(student, semester) {
+      if (student) {
+        if (semester < student.semester) {
+          return 'done';
+        }
+        if (semester == student.semester) {
+          return 'inProgress';
+        }
+        if (semester > student.semester) {
+          return 'toDo';
+        }
+      }
+      return '';
     }
   });
   </script>
