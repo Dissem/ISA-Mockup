@@ -27,6 +27,28 @@
         ],
         "possible" : [7]
       },
+     {
+        "id": "BZG1151",
+        "title" : "Diskrete Mathematik",
+        "credits" : 6,
+        "group" : "A",
+        "description" : "In diesem Modul werden die folgenden Themen und Inhalte behandelt:\nMengenlehre und Logik\nRelationen und Funktionen\nRekursion, Iteration und vollständige Induktion\nElementare Zahlentheorie mit Anwendungen in der Kryptographie\nGraphentheorie",
+        "teacher" : {"name": "Meyer Christian Dr.", "email":"meyer.christian@example.com"},
+        "grading" : "Erfahrungsnachweis (E)",
+        "implementations" : [
+          {
+            "place" : "Biel",
+            "day" : "Mo",
+            "time" : "08:20-09:55"
+          },
+          {
+            "place" : "Bern",
+            "day" : "Di",
+            "time" : "18:10-19:45"
+          }
+        ],
+        "possible" : [1]
+      },
       {
         "id": "BTI7065",
         "title" : "Berechenbarkeit und Komplexität",
@@ -57,15 +79,123 @@
           }
         },
         "possible" : [7]
-      }
-    ]
-  },
+    },
+     {
+        "id": "BZG1151",
+        "title" : "Diskrete Mathematik",
+        "credits" : 6,
+        "group" : "A",
+        "description" : "In diesem Modul werden die folgenden Themen und Inhalte behandelt: \nMengenlehre und Logik\nRelationen und Funktionen Rekursion, Iteration und vollständige Induktion\n Elementare Zahlentheorie mit Anwendungen in der Kryptographie\n    Graphentheorie ",
+        "teacher" : {"name": "Dozent Meyer Christian Dr.", "email":"meyer.christian@example.com"},
+        "grading" : "Erfahrungsnachweis (E)",
+        "implementations" : [
+          {
+            "place" : "Biel",
+            "day" : "Mo",
+            "time" : "08:20-09:55"
+          },
+          {
+            "place" : "Bern",
+            "day" : "Di",
+            "time" : "18:10-19:45"
+          }
+        ],
+        "possible" : [1]
+      },
+     {
+        "id": "BTI7051p",
+        "title" : "Einführung in die Programmierung",
+        "credits" : 6,
+        "group" : "A",
+        "description" : "In diesem Modul werden die folgenden Themen und Inhalte behandelt:\nEinführung in das Konzept der Programmiersprachen, die Java Programmierplattform; \nObjektbasierte Programmierung: Klassen, Objekte, Methoden, Datentypen, Zahlen, Zeichenketten, Kontrollstrukturen;\nEinführung in die graphische Programmierung: einfache graphische Komponenten, Farben, Schriften; \n Tabellen (Arrays, Listen); \n Design-Elemente: Klassen-Design, Kohesion und Koppelung, Methodenkategorien, immutable Klassen; \n    Test und Deployment von Programmen: Unit Test, Packages, Lokalisierung von Klassen, .JAR-Dateien; \n    Java Interfaces, Polymorphismus, Event Behandlung, interne Klassen",
+        "teacher" : {"name": "Hudritsch Marcus", "email":"vorname.nachname@example.com"},
+        "grading" : "Erfahrungsnachweis (Pb)",
+        "implementations" : [
+          {
+            "place" : "Biel",
+            "day" : "Mo",
+            "time" : "08:20-09:55"
+          },
+          {
+            "place" : "Bern",
+            "day" : "Di",
+            "time" : "19:55 - 21:30"
+          }
+        ],
+        "possible" : [1]
+      },
+{
+        "id": "BTI7061p",
+        "title" : "Grundlagen der Informatik",
+        "credits" : 6,
+        "group" : "A",
+        "description" : "In diesem Modul werden die folgenden Themen und Inhalte behandelt:Computermodell: Architektur, Funktionsweise Darstellung von Grössen: Numerierungssysteme, physische Darstellung von Werten, Arithmetik Der Prozessor: Registertypen, Programmsegmentierung (mit der Programmvorbereitung angeknüpft), Speicheradressierungen, Flaggen Programm-Vorbereitung und -Test: Kompilator, Linker, Loader, Debugger (Beispiel in einer Windows und/oder Unix/Linux Umgebung) Stapel und Unterprogramme: Funktionsaufrufe, Parameterübergabe, Rückwertübergabe, Stapelrahmen, Unterbrechungen Einführung in die C Programmierungssprache: Typen, Variablen, Funktionen (Ähnlichkeiten/Unterschiede gegenüber Java), Ausdrücke (Operatoren und ihre Präzedenzen), Argumente, Umgebungsvariablen während Programmstart, C/Assembler-Zusammenarbeit Schnittstellen mit den Betriebssystemen (Windows und/oder Unix/Linux): Prozesse, besonders die Unterschiede zwischen Windows und Unix/Linux, Threads (Parallelen zu Java), Ereignisse, Signale, Meldungen, Sockets-Mechanismus.",
+        "teacher" : {"name": "Buechel Oliver", "email":"vorname.nachname@example.com"},
+        "grading" : "Erfahrungsnachweis (Pb)",
+        "implementations" : [
+          {
+            "place" : "Biel",
+            "day" : "Mo",
+            "time" : "08:20-09:55"
+          },
+          {
+            "place" : "Bern",
+            "day" : "Mi",
+            "time" : "18:10-19:45"
+          }
+        ],
+        "possible" : [1]
+      },
   {
     "group" : "B",
     "minECTS" : 26,
     "maxECTS" : 32,
     "currentECTS" : 18,
-    "modules" : []
+    "modules" : [{
+        "id": "BZG3401p",
+        "title" : "English 1 intermediate",
+        "credits" : 2,
+        "group" : "B",
+        "description" : "Students are expected to prepare and improve the main skills of English comprehension in listening, reading, speaking and\n writing. Students should be able to apply the knowledge gained in the first module in reading, writing, speaking and listening skills.\n At the end of this course, students are expected to understand detailed information in texts, engage in listening activities as well as give a good speech on a topic of their knowledge or field.",
+        "teacher" : {"name": "Krebs Thomas", "email":"Krebs.Thomas@example.com"},
+        "grading" : "Erfahrungsnachweis (E)",
+        "implementations" : [
+          {
+            "place" : "Biel",
+            "day" : "Mo",
+            "time" : "08:20-09:55"
+          },
+          {
+            "place" : "Bern",
+            "day" : "Di",
+            "time" : "16:15 - 17:50"
+          }
+        ],
+        "possible" : [1]
+      },
+     {
+        "id": "BZG3411p",
+        "title" : "English 1 advanced ",
+        "credits" : 2,
+        "group" : "B",
+        "description" : "Students are expected to prepare and improve the main skills of English comprehension in listening, reading, speaking and writing. Students should be able to apply the knowledge gained in the first module in reading, writing, speaking and listening skills.",
+        "teacher" : {"name": "Millard-Helfer Peter", "email":"Millard.Peter@example.com"},
+        "grading" : "Erfahrungsnachweis (E)",
+        "implementations" : [
+          {
+            "place" : "Biel",
+            "day" : "Mo",
+            "time" : "08:20-09:55"
+          },
+          {
+            "place" : "Bern",
+            "day" : "Di",
+            "time" : "16:15 - 17:50"
+          }
+        ],
+        "possible" : [1]
+      }
+    ]
   },
   {
     "group" : "C",
@@ -106,50 +236,65 @@
     "maxECTS" : 30,
     "currentECTS" : 0,
     "modules" : [
-      {
-        "id": "BTI4242",
-        "title" : "Doing Magic With Computers",
-        "credits" : 4,
-        "group" : "D",
-        "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, aperiam repellat exercitationem perferendis ad unde esse non asperiores recusandae eum ea neque illum sint dolor error earum ipsum optio similique.",
-        "teacher" : {"name" : "Christian Basler", "email" : "chrigu.basler@example.com" },
-        "grading" : "Erfahrungsnachweis (E)",
-        "implementations" : [
-          {
-            "place" : "Burgdorf",
-            "day" : "Fr",
-            "time" : "18:10-21:30"
-          },
-          {
-            "place" : "Bern",
-            "day" : "Mi",
-            "time" : "18:10-21:30"
-          }
-        ],
-        "possible": [8,9]
-      },
-      {
-        "id": "BTI7526",
-        "title" : "Cloud Computing",
-        "credits" : 2,
-        "group" : "D",
-        "description" : "Die Studierenden werden in den Aufbau und die Anwendung von Cloud Infrastrukturen und Diensten eingeführt. Sie erarbeiten sich eine Übersicht über aktuelle Cloud Angebote. Sie kennen Benutzer- und Programmier-Schnittstellen von Cloud Diensten. Sie erlernen den Aufbau einer Cloud Infrastruktur im Labor mit Hilfe von Open Source Cloud Software. Sie kennen die Probleme und Risiken des Einsatzes von Cloud Lösungen.",
-        "teacher" : {"name" : "Hansjörg Wenger", "email" : "hansjoerg.wenger@example.com" },
-        "grading" : "Erfahrungsnachweis (E)",
-        "implementations" : [
-          {
-            "place" : "Burgdorf",
-            "day" : "Mo",
-            "time" : "18:10-21:30"
-          },
-          {
-            "place" : "Bern",
-            "day" : "Di",
-            "time" : "18:10-21:30"
-          }
-        ],
-        "possible": [8,9]
-      }
+    
+
+{"id": "BZG3421","title" : "First Certificate Exam in English","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Jayne Herzig-Harrison", "email":"HSJ1@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Bi", "day" : "Mi", "time" : "16:15-17:50" },{ "place" : "Bu", "day" : "Mo", "time" : "12:45-14:20" },{ "place" : "Be", "day" : "Mo", "time" : "19:55-21.30" } ],"possible" : [7,9]},
+{"id": "BZG3421","title" : "First Certificate Exam in English","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Jayne Herzig-Harrison", "email":"HSJ1@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Bu", "day" : "Mo", "time" : "14:25-16:10" } ],"possible" : [8]},
+{"id": "BZG3422","title" : "Cambridge Advanced English","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Jayne Herzig-Harrison", "email":"HSJ1@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Bi", "day" : "Mi", "time" : "18:10-19:45" },{ "place" : "Bu", "day" : "Mo", "time" : "12:45-14:20" },{ "place" : "Be", "day" : "Mo", "time" : "16:15-17:50" } ],"possible" : [8]},
+{"id": "BZG3501","title" : "Spanisch 1","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Fausi Marti", "email":"MRF1@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Bi", "day" : "Mi", "time" : "16:15-17:50" },{ "place" : "Be", "day" : "Mo", "time" : "16:15-17:50" } ],"possible" : [7,9]},
+{"id": "BZG3501","title" : "Spanisch 1","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Maria Brönnimann", "email":"BAM3@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Bu", "day" : "Mo", "time" : "12:45-14:20" } ],"possible" : [7,9]},
+{"id": "BZG3502","title" : "Spanisch 2","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Fausi Marti", "email":"MRF1@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Bi", "day" : "Mi", "time" : "16:15-17:50" },{ "place" : "Be", "day" : "Mo", "time" : "16:15-17:50" } ],"possible" : [8]},
+{"id": "BZG3502","title" : "Spanisch 2","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Maria Brönnimann", "email":"BAM3@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Bu", "day" : "Mo", "time" : "12:45-14:20" } ],"possible" : [8]},
+{"id": "BZG3601","title" : "Chinesisch","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Ping Su", "email":"SUP2@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Bu", "day" : "Mi", "time" : "16:15-17:50" } ],"possible" : [7,9]},
+{"id": "BZG3701","title" : "International Relations","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Fausi Marti", "email":"MRF1@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Be", "day" : "Mo", "time" : "18:10-19:45" } ],"possible" : [7,9]},
+{"id": "BZG4203","title" : "Marketing","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Thomas von Burg", "email":"VUT1@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Be", "day" : "Mi", "time" : "16:15-17:50" },{ "place" : "Be", "day" : "Mi", "time" : "18:10-19:45" } ],"possible" : [8]},
+{"id": "BZG4203","title" : "Marketing","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Giampaolo Possagno", "email":"PGG1@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Bi", "day" : "Mo", "time" : "16:15-17:50" },{ "place" : "Bi", "day" : "Mi", "time" : "16:15-17:50" } ],"possible" : [7,9]},
+{"id": "BZG4203","title" : "Marketing","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Giampaolo Possagno", "email":"PGG1@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Bi", "day" : "Mo", "time" : "16:15-17:50" },{ "place" : "Bi", "day" : "Mi", "time" : "16:15-17:50" } ],"possible" : [8]},
+{"id": "BZG4204","title" : "Human Resources: Teamwork and Leadership","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Baumann Rébecca", "email":"BAR7@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Be", "day" : "Mi", "time" : "16:15-17:50" },{ "place" : "Be", "day" : "Mi", "time" : "18:10-19:45" } ],"possible" : [7,9]},
+{"id": "BZG4204","title" : "Human Resources: Teamwork and Leadership","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Giampaolo Possagno", "email":"PGG1@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Bi", "day" : "Mo", "time" : "18:10-19:45" },{ "place" : "Bi", "day" : "Mi", "time" : "18:10-19:45" } ],"possible" : [7,9]},
+{"id": "BZG4204","title" : "Human Resources: Teamwork and Leadership","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Giampaolo Possagno", "email":"PGG1@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Bi", "day" : "Mo", "time" : "18:10-19:45" },{ "place" : "Bi", "day" : "Mi", "time" : "18:10-19:45" } ],"possible" : [8]},
+{"id": "BZG4205","title" : "Strategiemanagement","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Roland Burri/Daniel Huber", "email":"BRR3/HBD1@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Be", "day" : "Mi", "time" : "14:25-16:10" },{ "place" : "Be", "day" : "Mi", "time" : "18:10-19:45" } ],"possible" : [8]},
+{"id": "BZG4205","title" : "Strategiemanagement","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Francisco Rodal", "email":"RDF1@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Bi", "day" : "Mi", "time" : "18:10-19:45" } ],"possible" : [8]},
+{"id": "BZG4206","title" : "Technologie- und Innovationsmanagement","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Roland Burri/Daniel Huber", "email":"BRR3/HBD1@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Be", "day" : "Mi", "time" : "16:15-17:50" },{ "place" : "Be", "day" : "Mi", "time" : "19:55-21.30" } ],"possible" : [8]},
+{"id": "BZG4206","title" : "Technologie- und Innovationsmanagement","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Francisco Rodal", "email":"RDF1@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Bi", "day" : "Mi", "time" : "19:55-21:30" } ],"possible" : [8]},
+{"id": "BZG1301","title" : "Programmierung in Matlab/Octave","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Marx Stampfli", "email":"SFM1@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Be", "day" : "Mi", "time" : "18:10-19:45" } ],"possible" : [7,9]},
+{"id": "BZG1305","title" : "Public Key Cryptographie","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Walter Businger", "email":"BGW1@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Bi", "day" : "Mo", "time" : "14:25-16:10" } ],"possible" : [8]},
+{"id": "BZG1305","title" : "Public Key Cryptographie","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Walter Businger", "email":"BGW1@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Be", "day" : "Mo", "time" : "18:10-19:45" } ],"possible" : [7,9]},
+{"id": "BZG1310","title" : "Objektorientierte Geometrie","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Marx Stampfli", "email":"SFM1@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Bi", "day" : "Mo", "time" : "14:25-16:10" } ],"possible" : [7,9]},
+{"id": "BZG1311","title" : "Sequentielle Parameterschätzung","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Roger Filliger", "email":"FGR2@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Bi", "day" : "Mo", "time" : "14:25-16:10" } ],"possible" : [7,9]},
+{"id": "BZG2302","title" : "Optische Bilderfassung","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Christian Thiess", "email":"TEC1@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Bi", "day" : "Mo", "time" : "12:45-14:20" } ],"possible" : [7,9]},
+{"id": "BZG2306","title" : "Quantencomputing","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Peter Schwab", "email":"SWP1@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Be", "day" : "Do", "time" : "16:15-17:50" } ],"possible" : [8]},
+{"id": "BZG2307","title" : "Moderne Physik","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Beat Neuenschwander, Patrick Schwaller", "email":"NDB1,SLP5@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Bu", "day" : "Mo", "time" : "16:15-17:50" } ],"possible" : [7,9]},
+{"id": "BZG2309","title" : "Nachhaltigkeit in den Ingenieurwissenschaften","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Eva Schüpbach", "email":"SAE6@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Bi", "day" : "Mo", "time" : "14:25-16:10" },{ "place" : "Bu", "day" : "Mi", "time" : "18:10-19:45" }  ],"possible" : [8]},
+{"id": "BTI7404","title" : "Security Tester","credits" : 4,"group" : "D","description" : "TODO","teacher" : {"name": "Raphael Haberer", "email":"HRR1@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Bi", "day" : "Mi", "time" : "08:20-11:55" } ],"possible" : [7,9]},
+{"id": "BTI7407","title" : "Paralleles Rechnen","credits" : 4,"group" : "D","description" : "TODO","teacher" : {"name": "J.Eckerle, P.Schwab", "email":"ERJ1,SWP1@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Be", "day" : "Do", "time" : "16:15-19:45" } ],"possible" : [7,9]},
+{"id": "BTI7408","title" : "Advanced Web Technology","credits" : 4,"group" : "D","description" : "TODO","teacher" : {"name": "Emmanuel Benoist", "email":"BIE1@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Bi", "day" : "Do", "time" : "12:45-16:10" } ],"possible" : [7,9]},
+{"id": "BTI7409","title" : "Linux","credits" : 4,"group" : "D","description" : "TODO","teacher" : {"name": "Meyer Franz", "email":"MYF1@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Be", "day" : "Do", "time" : "16:15-19:45" } ],"possible" : [7,9]},
+{"id": "BTI7509","title" : "SAP-Prozesse","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Michael Röthlin", "email":"RLM1@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Be", "day" : "Mo", "time" : "18:10-19:45" } ],"possible" : [7,9]},
+{"id": "BTI7513","title" : "Projektführungsmodell HERMES","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Frank Helbling", "email":"HIF1@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Bi", "day" : "Fr", "time" : "16:15-17:50" } ],"possible" : [7,9]},
+{"id": "BTI7515","title" : "Java Soft. Entwicklung mit Open Source 1","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Roger Villars", "email":"VAR1@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Be", "day" : "Di", "time" : "16:15-17:50" } ],"possible" : [7,9]},
+{"id": "BTI7517","title" : "Biometrie","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Lorenz Müller", "email":"MLL2@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Bi", "day" : "Mi", "time" : "14:25-16:10" } ],"possible" : [7,9]},
+{"id": "BTI7520","title" : "Digitale Photographie","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Urs Künzler", "email":"KLU1@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Be", "day" : "Mi", "time" : "19:55-21:30" } ],"possible" : [7,9]},
+{"id": "BTI7523","title" : "Java/.NET Interoperability for Appl.Dev.  1","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Ueli Schrag", "email":"SRU2@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Bi", "day" : "Mo", "time" : "10:20-11:55" } ],"possible" : [7,9]},
+{"id": "BTI7526","title" : "Cloud Computing","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Hansjürg Wenger", "email":"WGH1@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Be", "day" : "Mo", "time" : "16:15-17:50" } ],"possible" : [7,9]},
+{"id": "BTI7529","title" : "Selected Crypto Topics for Security and Privacy","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Haenni Rolf", "email":"HNR1@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Bi", "day" : "Di", "time" : "16:15-17:50" } ],"possible" : [7,9]},
+{"id": "BTI7530","title" : "SAP Development","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Lutz Rosenplanzer", "email":"RZL1@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Be", "day" : "Mo", "time" : "19:55-21:30" } ],"possible" : [7,9]},
+{"id": "BTI7501","title" : "Spieltheorie","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Jürgen Eckerle", "email":"ERJ1@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Be", "day" : "Mo", "time" : "18:10-19:45" } ],"possible" : [8]},
+{"id": "BTI7503","title" : "Advanced C++","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "P. Fierz, M. Hudritsch", "email":"FEP1,HSM4@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Bi", "day" : "Di", "time" : "10:20-11:55" } ],"possible" : [8]},
+{"id": "BTI7504","title" : "Semantic Web","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Olivier Bieberstein", "email":"BEO1@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Be", "day" : "Di", "time" : "18:10-19:45" } ],"possible" : [8]},
+{"id": "BTI7512","title" : "Einführung in C#","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Marcel Pfahrer", "email":"PRM1@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Bi", "day" : "Mi", "time" : "12:45-14:20" } ],"possible" : [7,9]},
+{"id": "BTI7511","title" : "App-Programmierung mit C# und .NET","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Marcel Pfahrer", "email":"PRM1@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Bi", "day" : "Di", "time" : "14:25-16:10" } ],"possible" : [8]},
+{"id": "BTI7510","title" : "Artificial Intelligence","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "J.Eckerle, B.Anrig", "email":"ERJ1,ARB1@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Bi", "day" : "Mo", "time" : "12:45-14:20" } ],"possible" : [8]},
+{"id": "BTI7514","title" : "Offensive Security","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Philipp Schrödel", "email":"SDP6@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Bi", "day" : "Mi", "time" : "14:25-16:10" } ],"possible" : [8]},
+{"id": "BTI7516","title" : "Java Soft. Entwicklung mit Open Source 2","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Roger Villars", "email":"VAR1@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Be", "day" : "Di", "time" : "16:15-17:50" } ],"possible" : [8]},
+{"id": "BTI7519","title" : "JavaFX","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Ueli Schrag", "email":"SRU2@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Be", "day" : "Do", "time" : "16:15-17:50" } ],"possible" : [8]},
+{"id": "BTI7524","title" : "Java/.NET Interoperability for Appl.Dev. 2","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Ueli Schrag", "email":"SRU2@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Bi", "day" : "Mo", "time" : "10:20-11:55" } ],"possible" : [8]},
+{"id": "BTI7525","title" : "Digitale Photographie für Fortgeschrittene","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Urs Künzler", "email":"KLU1@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Be", "day" : "Di", "time" : "16:15-17:50" } ],"possible" : [8]},
+{"id": "BTI7527","title" : "Game Development","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Marcus Hudritsch", "email":"HSM4@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Bi", "day" : "Di", "time" : "12:45-14:20" } ],"possible" : [8]},
+{"id": "BTI7528","title" : "Advanced Data Management","credits" : 2,"group" : "D","description" : "TODO","teacher" : {"name": "Arno Schmidhauser", "email":"SSA1@bfh.ch"},"grading" : "Erfahrungsnachweis (E)", "implementations" : [ { "place" : "Be", "day" : "Di", "time" : "19:55-21:30" } ],"possible" : [8]}
+
+
+
     ]
   }
 ]
