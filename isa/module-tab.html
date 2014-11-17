@@ -51,6 +51,7 @@
         var tab = tabs[i];
         tab.active = (tab.id == detail.id);
       }
+      detail.student = this.student
       this.$.modules.filter = detail;
     }
   });

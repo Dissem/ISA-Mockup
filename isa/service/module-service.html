@@ -70,7 +70,7 @@
         "reflect" : true
       },
       "allModules" : undefined,
-      "filter" : ""
+      "filter" : undefined
     },
     groupFilter: function(value) {
       var groups = [];
@@ -110,8 +110,12 @@
             return false;
           }
           return contains(['F', 'FX'], module.subscription.grade);
+        case 'Laufend':
+          var m = this.filter.student.modules;
+          return m[module.id] && m[module.id].subscription && m[module.id].subscription.semester == this.filter.student.semester;
         default:
-          return !module.subscription;
+          var m = this.filter.student.modules;
+          return !m[module.id];
       }
     },
     created: function() {

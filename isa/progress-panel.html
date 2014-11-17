@@ -51,7 +51,7 @@
       <template repeat="{{g in modules}}">
         <div class="groupProgress">
           <div style="float:left">{{g.group}}</div>
-          <paper-progress value="{{achievedCreditsInGroup(student, g)}}" secondaryProgress="{{achievedCreditsInGroup(student, g) + subscribedCreditsInGroup(student, g)}}" max="{{g.minETCS}}">
+          <paper-progress value="{{student.creditsInGroup[g.group]}}" secondaryProgress="{{student.creditsInGroup[g.group] + subscribedCreditsInGroup(student, g)}}" max="{{g.minETCS}}">
             <paper-shadow z="1"></paper-shadow>
           </paper-progress>
         </div>
@@ -73,17 +73,6 @@
       if (student && group) {
         for (module of group.modules) {
           if (student.modules[module.id] && !student.modules[module.id].grade) {
-            credits += module.credits;
-          }
-        }
-      }
-      return credits;
-    },
-    achievedCreditsInGroup: function(student, group) {
-      var credits = 0;
-      if (student && group) {
-        for (module of group.modules) {
-          if (student.modules[module.id] && contains(['A', 'B', 'C', 'D', 'E'], student.modules[module.id].grade)) {
             credits += module.credits;
           }
         }
