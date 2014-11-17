@@ -1,4 +1,6 @@
 <link rel="import" href="../components/polymer/polymer.html">
+<link rel="import" href="../components/paper-shadow/paper-shadow.html">
+<link rel="import" href="../components/paper-shadow/paper-shadow.css">
 <link rel="import" href="../components/paper-dialog/paper-dialog.html">
 <link rel="import" href="../components/paper-dialog/paper-dialog-transition.html">
 <link rel="import" href="../components/paper-radio-group/paper-radio-group.html">
@@ -14,6 +16,17 @@
     :host {
       display: block;
       width: 100%;
+    }
+    .row {
+      width: 100%;
+    }
+    .emptyGroup {
+      padding: 5px;
+      text-align: center;
+      font-style: italic;
+      font-weight: 200;
+      color: #888;
+      background-color: #eee;
     }
     </style>
     
@@ -42,6 +55,12 @@
     <div layout vertical center>
       <template id="grouplist" repeat="{{group in groups}}">
         <module-header group="{{group}}" student="{{student}}" subscriptions="{{student.modules}}"></module-header>
+        <div class="row" hidden?="{{group.modules.length > 0}}">
+          <div class="emptyGroup col-sm-12">
+            <paper-shadow z="1"></paper-shadow>
+            Keine Module in dieser Gruppe
+          </div>
+        </div>
         <template id="modules" repeat="{{module in group.modules}}">
           <module-row
             module="{{module}}"

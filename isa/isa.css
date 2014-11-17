@@ -35,5 +35,5 @@ paper-radio-group paper-radio-button::shadow #onRadio {
 
 #module-card {
 	border: 1px solid #03a9f4;
-	min-height: 300px;
+	min-height: 500px;
 }
