@@ -12,6 +12,7 @@
 
 <polymer-element name="module-row" attributes="module subscription">
   <template>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="isa.css">
     <link rel="stylesheet" href="bootstrap-grid.css">
     <style>
@@ -58,18 +59,18 @@
     <div id="card-header" on-click="{{headerClick}}">
       <div class="row">
         <div class="col-sm-6">
-          {{module.title}}
+          <i class="fa fa-fw fa-chevron-right" hidden?="{{detail}}"></i><i class="fa fa-fw fa-chevron-down" hidden?="{{!detail}}"></i> {{module.title}}
         </div>
         <div class="col-sm-2">{{stateText(student, subscription)}}</div>
         <div class="col-sm-2">{{module.required?'Pflichtmodul':''}}</div>
         <div id="credits" class="col-sm-2" style="text-align:right">{{module.credits}} ECTS</div>
       </div>
     </div>
-    <div id="description" hidden="true">
+    <div id="description" hidden?="{{!detail}}">
       <div class="row">
         <div class="col-md-6">
           {{module.id}}<br>
-          <a href="mailto:{{module.teacher.email}}" target="_blank">{{module.teacher.name}}</a>
+          {{module.teacher.name}} <a href="mailto:{{module.teacher.email}}" target="_blank"><i class="fa fa-envelope"></i></a>
         </div>
         <div class="col-md-6" style="text-align: right;">
           <template repeat="{{impl in module.implementations}}">
@@ -77,9 +78,8 @@
           </template>
         </div>
         <div class="col-md-12">
-          <template repeat="{{module.description | lines}}">
-            <p>{{}}</p>
-          </template>
+          <br />
+          <a href="http://www.ti.bfh.ch/fileadmin/modules/{{module.id}}-de.xml" target="_blank">Modulbeschreibung</a>
         </div>
         <div class="col-md-12" style="text-align:right">
           <span class="colored-text" hidden?="{{!subscription}}">
@@ -93,13 +93,14 @@
   </template>
   <script>
   Polymer({
+    detail: false,
     created: function() {
       if (this.student && this.student.modules[this.module.id]) {
         this.subscription = this.student.modules[this.module.id].subscription;
       }
     },
     headerClick: function(event, detail, sender) {
-      this.$.description.hidden = !this.$.description.hidden;
+      this.detail = !this.detail;
     },
     lines: function(value) {
       return value.split("\n");

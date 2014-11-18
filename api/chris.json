@@ -17,10 +17,51 @@
 	            "time" : "18:10-21:30"
 	          }
 	        }
+		},
+		"BTI7065" : {
+			"subscription" : {
+	          "semester" : 7,
+	          "implementation" : {
+	            "place" : "Bern",
+	            "day" : "Do",
+	            "time" : "16:15-17:55"
+	          }
+	        }
+		},
+		"BTI7252" : {
+			"subscription" : {
+	          "semester" : 7,
+	          "implementation" : {
+	            "place" : "Biel",
+	            "day" : "Fr",
+	            "time" : "08:20-16:10"
+	          }
+	        }
+		},
+		"BZG1310" : {
+			"subscription" : {
+	          "semester" : 7,
+	          "implementation" : {
+	            "place" : "Biel",
+	            "day" : "Mo",
+	            "time" : "14:25-16:10"
+	          }
+	        }
+		},
+		"BTI7407" : {
+			"subscription" : {
+	          "semester" : 7,
+	          "implementation" : {
+	            "place" : "Bern",
+	            "day" : "Do",
+	            "time" : "16:15-19:45"
+	          }
+		    }
 		}
 	},
 	"phone" : "079 555 06 32",
 	"semester" : 7,
 	"credits" : 120,
+	"creditsInGroup": {"A" : 46, "B" : 18, "C" : 16, "D" : 0},
 	"openSemesters" : [8,9]
 }

@@ -1,0 +1,41 @@
+<link rel="import" href="../components/polymer/polymer.html">
+<link rel="import" href="../components/paper-shadow/paper-shadow.html">
+<link rel="import" href="../components/paper-shadow/paper-shadow.css">
+<link rel="import" href="../components/core-icon-button/core-icon-button.html">
+<link rel="import" href="../components/core-dropdown/core-dropdown.html">
+<link rel="import" href="../components/paper-button/paper-button.html">
+<link rel="import" href="../components/paper-dropdown-menu/paper-dropdown-menu.html">
+<link rel="import" href="../components/paper-item/paper-item.html">
+<link rel="import" href="service/student-service.html">
+
+<polymer-element name="profile-corner">
+  <template>
+    <link rel="stylesheet" href="isa.css">
+    <link rel="stylesheet" href="bootstrap-grid.css">
+    <style>
+    :host {
+      float: right;
+      text-align: right;
+    }
+    a {
+      font-size: 70%;
+    }
+    img {
+      float: right;
+      border-radius: 50%;
+      width: 2.5em;
+      height: 2.5em;
+      margin-left: 10px
+    }
+    </style>
+
+    <student-service student="{{student}}"></student-service>
+
+    <img src="../images/avatar-12.svg">
+    {{student.name}}<br>
+    <a href="javascript:alert('Diese Funktion ist leider nicht implementiert')">Abmelden</a>
+  </template>
+  <script>
+  Polymer({});
+  </script>
+</polymer-element>
