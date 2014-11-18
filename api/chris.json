@@ -1,6 +1,7 @@
 {
 	"name" : "Christian Basler",
 	"email" : "chrigu.basler@example.com",
+	"bfhemail" : "baslerc@bfh.ch",
 	"address" : {
 		"street" : "Bernstrasse 143",
 		"zip" : 3400,
@@ -8,60 +9,46 @@
 		"country" : "Switzerland"
 	},
 	"modules" : {
-		"BTI7083" : {
-			"subscription" : {
-	          "semester" : 7,
-	          "implementation" : {
-	            "place" : "Bern",
-	            "day" : "Di",
-	            "time" : "18:10-21:30"
-	          }
-	        }
-		},
-		"BTI7065" : {
-			"subscription" : {
-	          "semester" : 7,
-	          "implementation" : {
-	            "place" : "Bern",
-	            "day" : "Do",
-	            "time" : "16:15-17:55"
-	          }
-	        }
-		},
-		"BTI7252" : {
-			"subscription" : {
-	          "semester" : 7,
-	          "implementation" : {
-	            "place" : "Biel",
-	            "day" : "Fr",
-	            "time" : "08:20-16:10"
-	          }
-	        }
-		},
-		"BZG1310" : {
-			"subscription" : {
-	          "semester" : 7,
-	          "implementation" : {
-	            "place" : "Biel",
-	            "day" : "Mo",
-	            "time" : "14:25-16:10"
-	          }
-	        }
-		},
-		"BTI7407" : {
-			"subscription" : {
-	          "semester" : 7,
-	          "implementation" : {
-	            "place" : "Bern",
-	            "day" : "Do",
-	            "time" : "16:15-19:45"
-	          }
-		    }
-		}
+		"BZG3411" : { "subscription" : { "semester" : 1, "comment" : "English 1 advanced" }, "grade" : "A"},
+		"BZG1151" : { "subscription" : { "semester" : 1, "comment" : "Diskrete Mathematik" }, "grade" : "C"},
+		"BTI7051" : { "subscription" : { "semester" : 1, "comment" : "Einführung in die Programmierung" }, "grade" : "A"},
+		"BTI7061" : { "subscription" : { "semester" : 1, "comment" : "Grundlagen der Informatik" }, "grade" : "A"},
+		"BZG3412" : { "subscription" : { "semester" : 2, "comment" : "English 2 advanced" }, "grade" : "A"},
+		"BZG1152" : { "subscription" : { "semester" : 2, "comment" : "Lineare Algebra" }, "grade" : "C"},
+		"BTI7055" : { "subscription" : { "semester" : 2, "comment" : "Konzepte und Methoden der Programmierung" }, "grade" : "B"},
+		"BZG3101" : { "subscription" : { "semester" : 2, "comment" : "Kommunikation 1 - Deutsch" }, "grade" : "D"},
+		"BTI7021" : { "subscription" : { "semester" : 2, "comment" : "Betriebswirtschaftslehre 1" }, "grade" : "B"},
+		"BZG3102" : { "subscription" : { "semester" : 3, "comment" : "Kommunikation 2 - Deutsch" }, "grade" : "B"},
+		"BZG1153" : { "subscription" : { "semester" : 3, "comment" : "Analysis" }, "grade" : "A"},
+		"BTI7062" : { "subscription" : { "semester" : 3, "comment" : "Algorithmen und Datenstrukturen" }, "grade" : "B"},
+		"BTI7022" : { "subscription" : { "semester" : 3, "comment" : "Betriebswirtschaftslehre 2" }, "grade" : "C"},
+		"BZG2251" : { "subscription" : { "semester" : 3, "comment" : "Naturwissenschaft und Technik 1" }, "grade" : "A"},
+		"BTI7056" : { "subscription" : { "semester" : 4, "comment" : "Datenbanken" }, "grade" : "A"},
+		"BTI7081" : { "subscription" : { "semester" : 4, "comment" : "Software Engineering and Design" }, "grade" : "A"},
+		"BZG3413" : { "subscription" : { "semester" : 4, "comment" : "English 3 Advanced" }, "grade" : "A"},
+		"BTI7023" : { "subscription" : { "semester" : 4, "comment" : "Recht und Informationsgesellschaft" }, "grade" : "A"},
+		"BZG2252" : { "subscription" : { "semester" : 4, "comment" : "Naturwissenschaft und Technik 2" }, "grade" : "A"},
+		"BTI7082" : { "subscription" : { "semester" : 5, "comment" : "Project Management" }, "grade" : "B"},
+		"BTI7054" : { "subscription" : { "semester" : 5, "comment" : "Web Programming" }, "grade" : "A"},
+		"BTI7301" : { "subscription" : { "semester" : 5, "comment" : "Projekt 1" }, "grade" : "B"},
+		"BTI7071" : { "subscription" : { "semester" : 5, "comment" : "Telematik" }, "grade" : "B"},
+		"BTI7064" : { "subscription" : { "semester" : 5, "comment" : "Automaten und formale Sprachen" }, "grade" : "C"},
+		"BZG1154" : { "subscription" : { "semester" : 6, "comment" : "Wahrscheinlichkeitsrechnung und Statistik" }, "grade" : "C"},
+		"BTI7072" : { "subscription" : { "semester" : 6, "comment" : "Network Design and Services" }, "grade" : "A"},
+		"BTI7063" : { "subscription" : { "semester" : 6, "comment" : "Betriebssysteme" }, "grade" : "A"},
+		"BTI7261" : { "subscription" : { "semester" : 6, "comment" : "Security Basics and Applied Cryptography" }, "grade" : "B"},
+		"BTI7262" : { "subscription" : { "semester" : 7, "comment" : "Network and System Security " }},
+		"BTI7065" : { "subscription" : { "semester" : 7, "comment" : "Berechenbarkeit und Komplexität" }},
+		"BTI7526" : { "subscription" : { "semester" : 7, "comment" : "Cloud Computing" }},
+		"BTI7509" : { "subscription" : { "semester" : 7, "comment" : "SAP Prozesse" }},
+		"BTI7530" : { "subscription" : { "semester" : 7, "comment" : "SAP Development" }},
+		"BTI7409" : { "subscription" : { "semester" : 7, "comment" : "Linux" }},
+		"BTI7083" : { "subscription" : { "semester" : 7, "comment" : "User Centered Design " }}		
 	},
+	"studyadviser" : "Peter Schwab",
 	"phone" : "079 555 06 32",
 	"semester" : 7,
 	"credits" : 120,
-	"creditsInGroup": {"A" : 46, "B" : 18, "C" : 16, "D" : 0},
+	"creditsInGroup": {"A" : 82, "B" : 28, "C" : 24, "D" : 10},
 	"openSemesters" : [8,9]
 }

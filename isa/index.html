@@ -19,6 +19,8 @@
   <link rel="import" href="../components/paper-tabs/paper-tabs.html">
   <link rel="import" href="profile-corner.html">
   <link rel="import" href="module-tab.html">
+  <link rel="import" href="documents-tab.html">
+  <link rel="import" href="profile-tab.html">
 
   <style>
   html,body {
@@ -48,6 +50,9 @@
   }
   .highlight {
     color: #ffff00;
+  }
+  paper-tabs::shadow #selectionBar {
+    height: 6px;
   }
   </style>
   <script>
@@ -81,15 +86,42 @@
     </core-toolbar>
     <!-- main page content will go here --> 
     <module-tab></module-tab>
+    <documents-tab hidden></documents-tab>
+    <profile-tab hidden></profile-tab>
   </core-header-panel>
 
   <script>
+    var profileCorner = document.querySelector('profile-corner');
     var tabs = document.querySelector('paper-tabs');
     var list = document.querySelector('post-list');
+    var modules = document.querySelector('module-tab');
+    var documents = document.querySelector('documents-tab');
+    var profile = document.querySelector('profile-tab');
 
-    tabs.addEventListener('core-select', function() {
-      // list.show = tabs.selected;
+    function hideAll() {
+      modules.hidden = true;
+      documents.hidden = true;
+      profile.hidden = true;
+    }
+
+    tabs.addEventListener('core-select', function(event) {
+      hideAll();
+      switch (event.detail.item.getAttribute('name')) {
+        case 'modules':
+          modules.hidden = false;
+          break;
+        case 'documents':
+          documents.hidden = false;
+          break;
+        case 'profile':
+          profile.hidden = false;
+          break;
+      }
     });
+    profileCorner.addEventListener('core-select', function() {
+      tabs.selected = 'profile';
+    });
+
   </script>
 </body>
 </html>

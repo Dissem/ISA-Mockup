@@ -1,0 +1,46 @@
+<link rel="import" href="../components/polymer/polymer.html">
+<link rel="import" href="service/student-service.html">
+<link rel="import" href="module-table.html">
+<link rel="import" href="progress-panel.html">
+<link rel="import" href="big-tab.html">
+
+<polymer-element name="documents-tab" attributes="items">
+  <template>
+    <link rel="stylesheet" href="isa.css">
+    <link rel="stylesheet" href="bootstrap-grid.css">
+    <style>
+    :host {
+      display: block;
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%;
+      padding: 20px;
+    }
+    ul {
+      list-style-type: none;
+    }
+    li {
+      padding: 10px;
+    }
+    </style>
+
+    <module-service id="service" allModules="{{groups}}"></module-service>
+    <student-service student="{{student}}"></student-service>
+    <div class="container">
+      <div id="documents-card" class="card">
+        <paper-shadow z="1"></paper-shadow>
+        <ul>
+          <li><a href="javascript:alert('Entschuldigung, Downloads sind leider nicht implementiert :(')">Studienbestätigung</a></li>
+          <li><a href="javascript:alert('Entschuldigung, Downloads sind leider nicht implementiert :(')">Zeugnis (ToR)</a></li>
+          <li><a href="javascript:alert('Entschuldigung, Downloads sind leider nicht implementiert :(')">GA-Formular</a></li>
+          <li><a href="javascript:alert('Entschuldigung, Downloads sind leider nicht implementiert :(')">Merkblatt Unfallversicherung</a></li>
+          <li><a href="javascript:alert('Entschuldigung, Downloads sind leider nicht implementiert :(')">Merkblatt AHV/IV/EO</a></li>
+        </ul>
+      </div>
+    </div>
+  </template>
+  <script>
+  Polymer({});
+  </script>
+</polymer-element>

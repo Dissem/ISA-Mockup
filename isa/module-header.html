@@ -28,13 +28,14 @@
     }
     #card-header {
       padding: 10px;
+      font-weight: 400;
     }
     </style>
 
     <paper-shadow z="1"></paper-shadow>
     <div id="card-header" class="colored" on-click="{{headerClick}}">
         Gruppe {{group.group}}
-        <div style="float:right;">{{group.minECTS}} bis {{group.maxECTS}} ECTS nötig, davon {{group.currentECTS}} erworben und {{currentECTS(subscriptions)}} eingeschrieben</div>
+        <div style="float:right;font-weight:100">{{group.minECTS}} bis {{group.maxECTS}} ECTS nötig, davon {{group.currentECTS}} erworben und {{currentECTS(subscriptions)}} eingeschrieben</div>
     </div>
   </template>
   <script>

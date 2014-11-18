@@ -20,22 +20,40 @@
     a {
       font-size: 70%;
     }
+    span {
+      cursor: pointer;
+    }
     img {
       float: right;
       border-radius: 50%;
       width: 2.5em;
       height: 2.5em;
-      margin-left: 10px
+      margin-left: 10px;
+      cursor: pointer;
     }
     </style>
 
     <student-service student="{{student}}"></student-service>
 
-    <img src="../images/avatar-12.svg">
-    {{student.name}}<br>
+    <img on-click="{{showProfile}}" src="../images/avatar-12.svg">
+    <span on-click="{{showProfile}}">{{student.name}}</span><br>
     <a href="javascript:alert('Diese Funktion ist leider nicht implementiert')">Abmelden</a>
   </template>
   <script>
-  Polymer({});
+  Polymer({
+    showProfile: function() {
+      var event = {
+        "detail" : {
+          "item" : {
+            "getAttribute" : function() {
+              return "profile";
+            }
+          }
+        }
+      };
+      console.log(event);
+      this.fire('core-select', event);
+    }
+  });
   </script>
 </polymer-element>

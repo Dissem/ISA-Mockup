@@ -1,0 +1,71 @@
+<link rel="import" href="../components/polymer/polymer.html">
+<link rel="import" href="../components/paper-input/paper-input.html">
+<link rel="import" href="service/student-service.html">
+<link rel="import" href="module-table.html">
+<link rel="import" href="progress-panel.html">
+<link rel="import" href="big-tab.html">
+
+<polymer-element name="profile-tab">
+  <template>
+    <link rel="stylesheet" href="isa.css">
+    <link rel="stylesheet" href="bootstrap-grid.css">
+    <style>
+    :host {
+      display: block;
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%;
+      padding: 20px;
+    }
+    ul {
+      list-style-type: none;
+      margin: 0px;
+      padding: 0px;
+    }
+    .row > div {
+      margin-bottom: 0.8em;
+    }
+    paper-input {
+      width: 100%;
+    }
+    </style>
+
+    <student-service student="{{student}}"></student-service>
+    <div class="container">
+      <div id="documents-card" class="card">
+        <paper-shadow z="1"></paper-shadow>
+        <h1>Adresse</h1>
+        <div class="row">
+          <div class="col-md-6">
+            <paper-input label="Strasse" floatingLabel value="{{student.address.street}}"></paper-input><br>
+            <paper-input label="PLZ" style="width:20%;" floatingLabel value="{{student.address.zip}}"></paper-input>
+            <paper-input label="Ort" style="width:78%;" floatingLabel value="{{student.address.town}}"></paper-input><br>
+            <paper-input label="Land" floatingLabel value="{{student.address.country}}"></paper-input>
+          </div>
+          <div class="col-md-6">
+            <paper-input label="Telefon" floatingLabel value="{{student.phone}}"></paper-input><br>
+            <paper-input label="E-Mail (Privat)" floatingLabel value="{{student.email}}"></paper-input><br>
+            <paper-input label="E-Mail (BFH)" floatingLabel value="{{student.bfhemail}}" disabled="true"></paper-input>
+          </div>
+        </div>
+
+        <h1>Information</h1>
+        <div class="row">
+          <div class="col-md-4">Studienberater</div>
+          <div class="col-md-8">{{student.studyadviser}}</div>
+          <div class="col-md-4">Vorbildung</div>
+          <div class="col-md-8">
+            <ul>
+              <li>Berufslehre</li>
+              <li>Berufsmaturität</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script>
+  Polymer({});
+  </script>
+</polymer-element>
