@@ -70,7 +70,7 @@
       <div class="row">
         <div class="col-md-6">
           {{module.id}}<br>
-          {{module.teacher.name}} <a href="mailto:{{module.teacher.email}}" target="_blank"><i class="fa fa-envelope"></i></a>
+          {{module.teacher.name}} <a href="mailto:{{module.teacher.email}}"><i class="fa fa-envelope"></i></a>
         </div>
         <div class="col-md-6" style="text-align: right;">
           <template repeat="{{impl in module.implementations}}">
@@ -82,7 +82,7 @@
           <a href="http://www.ti.bfh.ch/fileadmin/modules/{{module.id}}-de.xml" target="_blank">Modulbeschreibung</a>
         </div>
         <div class="col-md-12" style="text-align:right">
-          <span class="colored-text" hidden?="{{!subscription}}">
+          <span class="colored-text" hidden?="{{!subscription || !subscription.implementation}}">
             Eingeschrieben für {{subscription.implementation.day}} {{subscription.implementation.time}} in {{subscription.implementation.place}}
           </span>
           <paper-button class="colored" raised hidden?="{{!isSubscribePossible(student)}}" on-click="{{subscribe}}" style="margin-left: 2em">{{subscription?'Ändern':'Einschreiben'}}</paper-button>
