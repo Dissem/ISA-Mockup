@@ -99,22 +99,21 @@
       if (this.filter.id!="state"){
         return true;
       }
+      var m = this.filter.student.modules;
       switch(this.filter.selection) {
         case "A-E":
-          if (!module.subscription) {
+          if (!m[module.id] || !m[module.id].subscription) {
             return false;
           }
-          return contains(['A','B','C','D','E'], module.subscription.grade);
+          return contains(['A','B','C','D','E'], m[module.id].grade);
         case "F-FX":
-          if (!module.subscription) {
+          if (!m[module.id] || !m[module.id].subscription) {
             return false;
           }
-          return contains(['F', 'FX'], module.subscription.grade);
+          return contains(['F', 'FX'], m[module.id].grade);
         case 'Laufend':
-          var m = this.filter.student.modules;
           return m[module.id] && m[module.id].subscription && m[module.id].subscription.semester == this.filter.student.semester;
         default:
-          var m = this.filter.student.modules;
           return !m[module.id];
       }
     },
