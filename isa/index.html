@@ -51,8 +51,13 @@
   .highlight {
     color: #ffff00;
   }
-  paper-tabs::shadow #selectionBar {
-    height: 6px;
+  paper-tab.core-selected {
+    background-color: #84d1f4;
+    color: #000000;
+    transition: color 1s;
+  }
+  paper-tab {
+    transition: background-color 0.3s;
   }
   </style>
   <script>
