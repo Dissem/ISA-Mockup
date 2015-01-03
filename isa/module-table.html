@@ -34,6 +34,9 @@
     <student-service student="{{student}}"></student-service>
 
     <paper-dialog id="subscribeDialog" heading="Einschreiben">
+      <div class="warning" hidden?="{{module.id != 'BTI7311'}}">
+        Achtung, das Modul steht in Konflikt mit "Konfliktmanagement I" (BTI0XXX).
+      </div>
       <p>Semester: 
         <paper-radio-group id="semester" selected="{{selectedSemester}}">
           <template repeat="{{module.possible}}">

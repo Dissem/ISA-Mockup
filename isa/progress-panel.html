@@ -45,15 +45,17 @@
     <paper-shadow z="1"></paper-shadow>
     <div id="title">Studium: ECTS-Credits</div>
     <div>
-      <paper-progress value="{{student.credits}}" secondaryProgress="{{student.credits + subscribedCredits(student, modules)}}" max="180" style="margin-bottom:1em">
+      <paper-progress value="{{student.credits}}" secondaryProgress="{{student.credits + subscribedCredits(student, modules)}}" max="180">
         <paper-shadow z="1"></paper-shadow>
       </paper-progress>
+      <div style="float:right;font-size:70%;margin-bottom:0.5em">{{student.credits}}/180</div>
       <template repeat="{{g in modules}}">
         <div class="groupProgress">
           <div style="float:left">{{g.group}}</div>
           <paper-progress value="{{student.creditsInGroup[g.group]}}" secondaryProgress="{{student.creditsInGroup[g.group] + subscribedCreditsInGroup(student, g)}}" max="{{g.minETCS}}">
             <paper-shadow z="1"></paper-shadow>
           </paper-progress>
+          <div style="float:right;font-size:70%">{{student.creditsInGroup[g.group]}}/{{g.minETCS}}</div>
         </div>
       </template>
     </div>
