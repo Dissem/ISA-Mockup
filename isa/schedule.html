@@ -1,0 +1,115 @@
+<link rel="import" href="../components/polymer/polymer.html">
+<link rel="import" href="../components/paper-shadow/paper-shadow.html">
+<link rel="import" href="../components/paper-shadow/paper-shadow.css">
+<link rel="import" href="../components/paper-fab/paper-fab.html">
+
+<polymer-element name="schedule-panel" attributes="student">
+  <template>
+    <link rel="stylesheet" href="isa.css">
+    <link rel="stylesheet" href="bootstrap-grid.css">
+    <style>
+    :host {
+      display: block;
+      margin-top: 20px;
+      padding: 20px;
+      background-color: #03a9f4;
+      color: #ffffff;
+      padding-bottom: 20px;
+    }
+    #title {
+      padding-bottom: 8px;
+      font-weight: 500;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11px;
+    }
+
+    table, th, td {
+      border: 1px solid white;
+    }
+
+    td {
+      background-color: #f4f1c3;
+      color: black;
+    }
+
+    td:empty {
+      background-color: transparent;
+    }
+
+    th, td {
+      width: 20%;
+      height: 11px;
+    }
+    </style>
+
+    <paper-shadow z="1"></paper-shadow>
+    <div id="title">Stundenplan</div>
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <th>Mo</th>
+            <th>Di</th>
+            <th>Mi</th>
+            <th>Do</th>
+            <th>Fr</th>
+          </tr>
+        </thead>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td rowspan=4>BTI7262</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BTI7526</td>
+          <td>BTI7065</td>
+          <td></td>
+          <td rowspan=2>BTI7409</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BTI7509</td>
+          <td rowspan=2>BTI7083</td>
+          <td></td>
+
+          <td></td>
+        </tr>
+        <tr>
+          <td>BTI7530</td>
+
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+    <content></content>
+  </template>
+  <script>
+  Polymer({
+  });
+  </script>
+</polymer-element>
