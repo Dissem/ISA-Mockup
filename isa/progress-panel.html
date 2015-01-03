@@ -2,6 +2,7 @@
 <link rel="import" href="../components/paper-shadow/paper-shadow.html">
 <link rel="import" href="../components/paper-shadow/paper-shadow.css">
 <link rel="import" href="../components/paper-progress/paper-progress.html">
+<link rel="import" href="../components/paper-fab/paper-fab.html">
 
 <polymer-element name="progress-panel" attributes="student modules">
   <template>
@@ -40,9 +41,17 @@
     paper-progress::shadow #progressContainer {
       background-color: #5dc9fa;
     }
+    paper-fab {
+      float: right;
+      top: -10px;
+      right: -10px;
+      color: #268EBD;
+      background-color: #f4e500;
+    }
     </style>
 
     <paper-shadow z="1"></paper-shadow>
+    <paper-fab mini icon="event"></paper-fab>
     <div id="title">Studium: ECTS-Credits</div>
     <div>
       <paper-progress value="{{student.credits}}" secondaryProgress="{{student.credits + subscribedCredits(student, modules)}}" max="180">
